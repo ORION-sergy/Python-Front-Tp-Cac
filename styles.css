@@ -22,7 +22,7 @@ header{
     top: 0;
 }
 
-/*Menú*/
+/*Menú desplegable (para mobile)*/
 .menu-logo {
     display: inline-block;
     text-decoration: none;
@@ -38,23 +38,14 @@ header{
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5)) brightness(120%); /* Aplica un filtro de sombra suave y un filtro de brillo al ícono */
 }
 
+/*Menú por defecto*/
 nav{
     height: 10vh;
     display: flex;
     justify-content: space-between;/*con respecto al eje principal, que es la fila(horizontal)*/
     align-items: center; /*con respecto al eje secundario, que es la columna(vartical)*/
-    padding: 0px 50px 0px 0px;
+    padding: 0px 20px; /* Ajusta el espacio desde los bordes derecho e izquierdo */
 }
-
-.navbar-menu {
-    transform: translateY(-100%);
-}
-
-.navbar-menu.show {
-    transform: translateY(0);
-    transition: transform 0.3s ease;
-}
-
 
 #nav-links{
     display: flex;
@@ -63,10 +54,34 @@ nav{
     list-style: none;
 }
 
+#nav-links li{
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
 #nav-links li a{
     text-decoration: none;
     color: whitesmoke;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300; /* Ajusta el grosor de la fuente a 300 (más delgada) o a tu preferencia */
 }
+
+#nav-links li:hover{
+    color: #ffffff; /* Cambia el color del ícono al pasar el ratón por encima */
+    text-decoration: none; /* Elimina el subrayado del ícono al pasar el ratón por encima */
+    transform: scale(1.05); /* Aumenta el tamaño del ícono */
+    filter: brightness(10); /* Aumenta el brillo del ícono */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Agrega un efecto de sombra al texto para que brille */
+
+}
+
+.fa-brands, .menu-logo{
+    color: #dfdede;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
 
 /*Main*/
 main{
@@ -75,17 +90,11 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
-
-.fa-brands, .menu-logo{
-    color: #dfdede;
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-
+.home-Title{
+    margin-top: 20vh; /* Ajusta según sea necesario */
+    padding: 10vh 0;
 }
 
 .home-Title a img{
@@ -93,8 +102,41 @@ main{
     justify-content: center;
     text-align: center;
     width: 400px;
-    height: auto;
 }
+
+.in-dev-container{
+    margin-top: 5vh; /* Ajusta según sea necesario */
+}
+
+/*Animación palpitante*/
+@keyframes pulse {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.03);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.in-dev{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 10;
+    font-style: italic;
+    color: #dfdede;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Agrega un efecto de sombra al texto para que brille */
+    text-rendering: optimizeLegibility; /* Hace que el texto se vea más suave y legible */
+    animation: pulse 3s infinite; /* Aplica la animación 'pulse' durante 2 segundos y la repite infinitamente */
+}
+
+.hidden-content{
+    overflow: hidden;
+}
+
 /*Footer*/
 footer{
     height: 10%;
