@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    background-image: url(Assets/img/Background.jpg);
+    background-size: auto 150%; /* Ajusta el tamaño de la imagen de fondo al 130% del tamaño del contenedor */
+    background-position: center top; /* Centra la imagen de fondo horizontalmente y la coloca en la parte inferior del contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+}
+
+header{
+    height: 10%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+/*Menú*/
+.menu-logo {
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 10px;
+    padding: 10px 20px;
+    color: #dfdede;
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease; /* Agrega la propiedad box-shadow a la transición */
+}
+
+.menu-logo:hover {
+    transform: scale(1.2); /* Aumenta el tamaño del ícono */
+    filter: brightness(3); /* Aumenta el brillo del ícono */
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5)) brightness(120%); /* Aplica un filtro de sombra suave y un filtro de brillo al ícono */
+}
+
+nav{
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;/*con respecto al eje principal, que es la fila(horizontal)*/
+    align-items: center; /*con respecto al eje secundario, que es la columna(vartical)*/
+    padding: 0px 50px 0px 0px;
+}
+
+.navbar-menu {
+    transform: translateY(-100%);
+}
+
+.navbar-menu.show {
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+
+#nav-links{
+    display: flex;
+    /*Ubicamos los li*/
+    gap: 30px; /*defino el tamano de los huecos entre los items*/
+    list-style: none;
+}
+
+#nav-links li a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+/*Main*/
+main{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.fa-brands, .menu-logo{
+    color: #dfdede;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.home-Title a img{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 400px;
+    height: auto;
+}
+/*Footer*/
+footer{
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-links{
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el espacio de relleno predeterminado de la lista */
+    display: flex; /* Hace que los elementos de la lista se muestren en línea */
+}
+
+.footer-links li{
+    margin-right: 20px; /* Añade espacio entre los elementos de la lista */
+
+}
+
+.footer-links li a {
+    text-decoration: none; /* Elimina la decoración del texto del enlace */
+}
+
+.footer-links li a i{
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer-links a:hover i {
+    color: #ffffff; /* Cambia el color del ícono al pasar el ratón por encima */
+    text-decoration: none; /* Elimina el subrayado del ícono al pasar el ratón por encima */
+    transform: scale(1.2); /* Aumenta el tamaño del ícono */
+    filter: brightness(10); /* Aumenta el brillo del ícono */
+}
