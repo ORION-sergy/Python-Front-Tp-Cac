@@ -8,9 +8,6 @@ html, body{
     height: 100%;
 }
 
-body{
-}
-
 header{
     height: 10%;
     position: absolute; /* Cambia la posición a absoluta */
