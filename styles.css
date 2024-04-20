@@ -154,8 +154,40 @@ nav{
     filter: brightness(10); /* Aumenta el brillo del ícono */
 }
 
+.presentation {
+    background-color: black;
+    padding: 10vh 20vw;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(to right, rgba(255, 255, 255, 0), #dfdede, rgba(255, 255, 255, 0)) 2 stretch;
+    filter: brightness(1.5); /* Ajusta el brillo según sea necesario */
+    outline: 1px solid transparent; /* Agrega un contorno adicional */
+}
 
+.presentation h3{
+    color: #dfdede;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    font-weight: 200;
+    font-style: italic;
+    color: #dfdede;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.687); /* Agrega un efecto de sombra al texto para que brille */
+    text-rendering: optimizeLegibility; /* Hace que el texto se vea más suave y legible */
+    text-align: center;
+    transition: transform 3s ease, filter 0.3s ease;
+}
 
+.presentation h3:hover{
+    transform: scale(1.05); /* Aumenta el tamaño del ícono */
+    filter: brightness(10); /* Aumenta el brillo del ícono */
+}
+
+.info{
+    background:  url(/Assets/img/Night.jpg);
+    background-size: cover;
+    padding: 10% 0 5% 0; 
+
+}
 
 
 
