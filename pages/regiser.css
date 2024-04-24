@@ -1,0 +1,20 @@
+body{
+background-image: url(../sources/guns.jpg) ;  
+}
+
+
+.Formu{
+
+    color: white;
+    font-size: 20px;
+    
+    padding: 150px;
+    margin: 50px;
+    align-content: center;
+
+}
+
+.title{
+    align-items: center;
+    color: white;
+}
