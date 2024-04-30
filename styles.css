@@ -38,7 +38,9 @@ nav{
 }
 
 #nav-links li{
-    transition: transform 0.2s ease, filter 0.2s ease;
+    transition: transform 0.2s ease, filter 0.2s ease; /* Separar la transición para transform y filter */
+    border-bottom: 1px solid transparent;
+
 }
 
 #nav-links li:hover{
@@ -47,16 +49,23 @@ nav{
     transform: scale(1.05); /* Aumenta el tamaño del ícono */
     filter: brightness(10); /* Aumenta el brillo del ícono */
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Agrega un efecto de sombra al texto para que brille */
+    border-image: linear-gradient(to right, rgba(255, 255, 255, 0), #dfdede, rgba(255, 255, 255, 0)) 2 stretch;
+    filter: brightness(1.5); /* Ajusta el brillo según sea necesario */
+    outline: 1px solid transparent; /* Agrega un contorno adicional */
 
 }
-
 
 #nav-links li a{
     text-decoration: none;
-    color: whitesmoke;
+    color: rgb(223, 222, 222);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 130%;
     font-weight: 300; /* Ajusta el grosor de la fuente a 300 (más delgada) o a tu preferencia */
 }
+
+
+
+/*Home Section*/
 
 #home{
     height: 100vh;
@@ -66,7 +75,7 @@ nav{
     justify-content: center;
     align-items: center;
 
-    padding: 10% 0 5% 0; 
+    padding: 0 0 5% 0; 
     position: relative; /* Cambia la posición a relativa */
     z-index: 0; /* Ajusta el índice z para que la sección #home esté detrás del header */
 
@@ -79,22 +88,30 @@ nav{
 }
 
 .home-Title{
-    margin-top: 20vh; /* Ajusta según sea necesario */
+    margin-top: 30vh; /* Ajusta según sea necesario */
     padding: 10vh 0;
+}
+
+.home-Title a{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    scale: 100%
 }
 
 .home-Title a img{
     display: flex;
     justify-content: center;
     text-align: center;
-    width: 400px;
+    width: 100%; /* Ajusta la anchura de la imagen al 100% del contenedor */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    max-width: 100%; /* Evita que la imagen se extienda más allá de su tamaño original */
     filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.372)); /* Utiliza drop-shadow para aplicar el sombreado */
-
+    padding: 0;
+    margin: 0;
 }
 
-.in-dev-container{
-    margin-top: 5vh; /* Ajusta según sea necesario */
-}
+
 
 /*Animación palpitante*/
 @keyframes pulse {
@@ -113,42 +130,13 @@ nav{
 
 .in-dev{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 30px;
+    font-size: 250%;
     font-weight: 10;
     font-style: italic;
-    color: #dfdede;
+    color: #ededed;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Agrega un efecto de sombra al texto para que brille */
     text-rendering: optimizeLegibility; /* Hace que el texto se vea más suave y legible */
     animation: pulse 3s infinite; /* Aplica la animación 'pulse' durante 2 segundos y la repite infinitamente */
-}
-
-.redes{
-    list-style: none; /* Elimina los puntos de la lista */
-    padding: 0; /* Elimina el espacio de relleno predeterminado de la lista */
-    display: flex; /* Hace que los elementos de la lista se muestren en línea */
-    padding: 20px;
-}
-
-.redes li{
-    margin-right: 20px; /* Añade espacio entre los elementos de la lista */
-
-}
-
-.redes li a {
-    text-decoration: none; /* Elimina la decoración del texto del enlace */
-}
-
-.redes li a i{
-    transition: transform 0.3s ease, filter 0.3s ease;
-    color: #dfdede;
-    font-size: 20px;
-}
-
-.redes a:hover i {
-    color: #ffffff; /* Cambia el color del ícono al pasar el ratón por encima */
-    text-decoration: none; /* Elimina el subrayado del ícono al pasar el ratón por encima */
-    transform: scale(1.2); /* Aumenta el tamaño del ícono */
-    filter: brightness(10); /* Aumenta el brillo del ícono */
 }
 
 .presentation {
@@ -164,10 +152,9 @@ nav{
 .presentation h3{
     color: #dfdede;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 25px;
+    font-size: 200%;
     font-weight: 200;
     font-style: italic;
-    color: #dfdede;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.687); /* Agrega un efecto de sombra al texto para que brille */
     text-rendering: optimizeLegibility; /* Hace que el texto se vea más suave y legible */
     text-align: center;
@@ -179,21 +166,94 @@ nav{
     filter: brightness(10); /* Aumenta el brillo del ícono */
 }
 
-.info{
+.info {
     display: flex;
     flex-direction: column;
-    background:  url(/Assets/img/Night.jpg);
+    background: url(/Assets/img/Night.jpg);
     background-size: cover;
-    padding: 20vh 10vw;
-    padding-right: 50vw;
-    justify-content: flex-start; 
-    text-align: justify;
+    padding: 40vh 5vw 10vh; /* Utilizando porcentajes para el relleno */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     margin: 0;
     color: #dfdede;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.info-container {
+    margin-bottom: 10%; /* Espacio entre cada sección */
+    max-width: 90%; /* Establecer un ancho máximo para evitar que el texto sea demasiado ancho */
+}
+
+.info-container h1, .info-container h2 {
+    padding: 0;
+    margin: 0;
+    color: #dfdede; /* Color de título personalizado */
+}
+
+h1 {
+    font-size: 5vw;
+}
+
+h2 {
+    font-size: 3vw;
+}
+
+.info-container p {
+    font-style: oblique;
+    margin: 1% 15vw 0; /* Espacio entre párrafos */
+    line-height: 1.6; /* Espaciado de línea aumentado */
+    font-size: 2vw;
+}
+
+
+
+
+/*Footer*/
+
+footer{
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(to right, rgba(255, 255, 255, 0), #dfdede, rgba(255, 255, 255, 0)) 2 stretch;
+    filter: brightness(1.5); /* Ajusta el brillo según sea necesario */
+    outline: 1px solid transparent; /* Agrega un contorno adicional */
+}
+
+.redes{
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el espacio de relleno predeterminado de la lista */
+    display: flex; /* Hace que los elementos de la lista se muestren en línea */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.redes li{
+    margin: 0 15%; /* Añade espacio entre los elementos de la lista */
 
 }
 
+.redes li a {
+    text-decoration: none; /* Elimina la decoración del texto del enlace */
+}
+
+.redes li a i{
+    transition: transform 0.3s ease, filter 0.3s ease;
+    color: #727272;
+    font-size: 200%;
+}
+
+.redes a:hover i {
+    color: #ffffff; /* Cambia el color del ícono al pasar el ratón por encima */
+    text-decoration: none; /* Elimina el subrayado del ícono al pasar el ratón por encima */
+    transform: scale(1.2); /* Aumenta el tamaño del ícono */
+    filter: brightness(10); /* Aumenta el brillo del ícono */
+}
 
 /*Menú desplegable (para mobile)*/
 
@@ -201,7 +261,19 @@ nav{
     display: none; /* Por defecto, oculta el botón del menú */
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
+
+    /* Ajustes para las imágenes */
+    img {
+        max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+        max-height: 90vh; /* Ajusta la altura automáticamente */
+    }
+
+    /* Ajustes para los backgrounds */
+    body {
+        background-size: cover; /* Ajusta el tamaño del fondo para cubrir completamente el contenedor */
+        background-position: center; /* Centra el fondo */
+    }
 
     .menu-container {
         position: absolute;
@@ -209,7 +281,6 @@ nav{
         justify-content: space-between; /* Distribuye los elementos horizontalmente */
         align-items: center; /* Centra los elementos verticalmente */
         padding: 10px; /* Ajusta el espacio alrededor del menú */
-
     }
     
     .menu-container::before {
@@ -230,21 +301,25 @@ nav{
     .menu-container.active::before {
         opacity: 1; /* Muestra el fondo borroso cuando el menú está activo */
     }
-    
-    
+
+    /* Agregar estilo para deshabilitar el scroll cuando el menú está activado */
+    body.menu-open {
+        overflow: hidden;
+    }
+
 
     /* Overlay para el área del menú */
     .menu-toggle {
+        scale: 250%;
         position: absolute;
         cursor: pointer; /* Cambia el cursor a un puntero al pasar el ratón por encima */
         display: inline-block;
         text-decoration: none;
         margin: 10vh 0 0 0;
-        padding: 10px 20px;
+        padding: 20% 100%;
         color: #dfdede;
         transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease; /* Agrega la propiedad box-shadow a la transición*/
         z-index: 1000; /* Asegura que el icono del menú esté en una capa superior */
-
     }
 
     .menu-toggle:hover {
@@ -257,7 +332,7 @@ nav{
         display: none; /* Por defecto, oculta el menú en dispositivos móviles */
         position: fixed;
         z-index: 1000; /* Asegura que el menú esté en una capa superior */
-            top: 50px;
+        top: 12%;
         left: 20px; /* Ajuste para que el menú esté pegado al borde izquierdo */
         background: transparent; /* Cambia el color de fondo del menú desplegable a transparente */
         width: 100%;
@@ -300,9 +375,7 @@ nav{
         transition: opacity 0.5s ease, transform 0.5s ease;
     }
 
-    #nav-links li:first-child {
-        margin-top: 10px;
-    }
+   
 
     #nav-links li:last-child {
         margin-bottom: -1px; /* Márgenes negativos para superponer la línea divisoria */
@@ -327,45 +400,109 @@ nav{
         }
     }
 
-    h1, h3, p {
-        font-size: 16px; /* Reduce el tamaño del texto */
-        line-height: 1.4; /* Ajusta la altura de línea */
+    #nav-links li a{
+        font-size: 200%;
     }
 
-    /* Ajustes para las imágenes */
-    img {
-        max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
-        height: auto; /* Ajusta la altura automáticamente */
+    #home{
+        background-image: none;
+        background-image: url(/Assets/img/Movie\ Poster.jpg);
+        background-size: cover;
     }
 
-    /* Ajustes para los backgrounds */
-    body {
-        background-size: cover; /* Ajusta el tamaño del fondo para cubrir completamente el contenedor */
-        background-position: center; /* Centra el fondo */
+    .home-Title, .home-Title a, .home-Title img{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        padding: 0 0 15vh 0;
+        margin-top: 12vh;
     }
 
-    /* Ajustes para las secciones */
-    section {
-        padding: 10px; /* Reduce el espacio alrededor del contenido */
+    .home-Title a{
+        scale: 95%;    
     }
 
-    /* Ajustes específicos para la sección de inicio */
-    #home {
-        padding: 5% 0; /* Reduce el espacio en la parte superior e inferior */
+    .home-Title a img{
+        filter: drop-shadow(10px 10px 20px rgb(0, 0, 0)); /* Utiliza drop-shadow para aplicar el sombreado */
+
     }
 
-    .home-Title img {
-        width: 80%; /* Redimensiona la imagen al 80% del ancho del contenedor */
+    .in-dev-container{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        position: inherit;
+        filter: drop-shadow(10px 10px 20px rgb(0, 0, 0)); /* Utiliza drop-shadow para aplicar el sombreado */
+
     }
 
-    .in-dev {
-        font-size: 14px; /* Reduce el tamaño del texto en desarrollo */
+    .in-dev{
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        position: inherit;
+        font-size: 7vw;
+        filter: drop-shadow(10px 10px 20px rgb(0, 0, 0)); /* Utiliza drop-shadow para aplicar el sombreado */
+
+    }
+
+    
+    .presentation {
+        padding: 50vh 5vw;
+    }
+
+    .presentation h3{
+        font-size: 200%;
+        font-weight: 100;
     }
 
     .info{
-        padding: 10vh 10vw;
+        padding: 10vh 0;
         justify-content: center;
+        text-align: center;
     }
+
+    .info-container{
+        padding: 0;
+        margin: 10% 0;
+    }
+
+    .info-container h1, .info-container h2{
+        padding: 1.1vh 0;
+        margin: 0;
+        text-align: center;
+        font-size: 350%;
+    }
+
+    .info h2{
+        font-size: 200%;
+    }
+
+    .info-container p{
+        font-size: x-large;
+        font-style: oblique;
+        padding: 0 5vw;
+        margin: 0;
+    }
+
+    footer{
+        display: flex;
+        height: 10vh;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .redes {
+        justify-content: center;
+        align-items: center;
+        margin: 2vh 0;
+    }
+    .redes li a i{
+        scale: 100%;
+    }
+    
 }
 
 
