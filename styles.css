@@ -1,0 +1,376 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+}
+
+header{
+    height: 10%;
+    position: absolute; /* Cambia la posición a absoluta */
+    width: 100%; /* Ajusta el ancho al 100% */
+    top: 0;
+    background: transparent; /* Establece el fondo del header como transparente */
+    z-index: 1; /* Asegura que el header esté en la parte superior */
+}
+
+/*Menú por defecto*/
+nav{
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;/*con respecto al eje principal, que es la fila(horizontal)*/
+    align-items: center; /*con respecto al eje secundario, que es la columna(vartical)*/
+    padding: 0px 20px; /* Ajusta el espacio desde los bordes derecho e izquierdo */
+}
+
+.navbar-menu {
+    background: transparent; /* Hace que el fondo del navbar sea transparente */
+}
+
+#nav-links{
+    display: flex;
+    /*Ubicamos los li*/
+    gap: 30px; /*defino el tamano de los huecos entre los items*/
+    list-style: none;
+}
+
+#nav-links li{
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+#nav-links li:hover{
+    color: #ffffff; /* Cambia el color del ícono al pasar el ratón por encima */
+    text-decoration: none; /* Elimina el subrayado del ícono al pasar el ratón por encima */
+    transform: scale(1.05); /* Aumenta el tamaño del ícono */
+    filter: brightness(10); /* Aumenta el brillo del ícono */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Agrega un efecto de sombra al texto para que brille */
+
+}
+
+
+#nav-links li a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300; /* Ajusta el grosor de la fuente a 300 (más delgada) o a tu preferencia */
+}
+
+#home{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10% 0 5% 0; 
+    position: relative; /* Cambia la posición a relativa */
+    z-index: 0; /* Ajusta el índice z para que la sección #home esté detrás del header */
+
+
+    background-image: url(Assets/img/Background.jpg);
+    background-size: auto 150%; /* Ajusta el tamaño de la imagen de fondo al 130% del tamaño del contenedor */
+    background-position: center top; /* Centra la imagen de fondo horizontalmente y la coloca en la parte inferior del contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    padding-bottom: 100px;
+}
+
+.home-Title{
+    margin-top: 20vh; /* Ajusta según sea necesario */
+    padding: 10vh 0;
+}
+
+.home-Title a img{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 400px;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.372)); /* Utiliza drop-shadow para aplicar el sombreado */
+
+}
+
+.in-dev-container{
+    margin-top: 5vh; /* Ajusta según sea necesario */
+}
+
+/*Animación palpitante*/
+@keyframes pulse {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.03);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.in-dev{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    font-weight: 10;
+    font-style: italic;
+    color: #dfdede;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Agrega un efecto de sombra al texto para que brille */
+    text-rendering: optimizeLegibility; /* Hace que el texto se vea más suave y legible */
+    animation: pulse 3s infinite; /* Aplica la animación 'pulse' durante 2 segundos y la repite infinitamente */
+}
+
+.redes{
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el espacio de relleno predeterminado de la lista */
+    display: flex; /* Hace que los elementos de la lista se muestren en línea */
+    padding: 20px;
+}
+
+.redes li{
+    margin-right: 20px; /* Añade espacio entre los elementos de la lista */
+
+}
+
+.redes li a {
+    text-decoration: none; /* Elimina la decoración del texto del enlace */
+}
+
+.redes li a i{
+    transition: transform 0.3s ease, filter 0.3s ease;
+    color: #dfdede;
+    font-size: 20px;
+}
+
+.redes a:hover i {
+    color: #ffffff; /* Cambia el color del ícono al pasar el ratón por encima */
+    text-decoration: none; /* Elimina el subrayado del ícono al pasar el ratón por encima */
+    transform: scale(1.2); /* Aumenta el tamaño del ícono */
+    filter: brightness(10); /* Aumenta el brillo del ícono */
+}
+
+.presentation {
+    background-color: black;
+    padding: 10vh 20vw;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(to right, rgba(255, 255, 255, 0), #dfdede, rgba(255, 255, 255, 0)) 2 stretch;
+    filter: brightness(1.5); /* Ajusta el brillo según sea necesario */
+    outline: 1px solid transparent; /* Agrega un contorno adicional */
+}
+
+.presentation h3{
+    color: #dfdede;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    font-weight: 200;
+    font-style: italic;
+    color: #dfdede;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.687); /* Agrega un efecto de sombra al texto para que brille */
+    text-rendering: optimizeLegibility; /* Hace que el texto se vea más suave y legible */
+    text-align: center;
+    transition: transform 3s ease, filter 0.3s ease;
+}
+
+.presentation h3:hover{
+    transform: scale(1.05); /* Aumenta el tamaño del ícono */
+    filter: brightness(10); /* Aumenta el brillo del ícono */
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    background:  url(/Assets/img/Night.jpg);
+    background-size: cover;
+    padding: 20vh 10vw;
+    padding-right: 50vw;
+    justify-content: flex-start; 
+    text-align: justify;
+    margin: 0;
+    color: #dfdede;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+
+/*Menú desplegable (para mobile)*/
+
+.menu-toggle, .fa-solid, .fa-bars {
+    display: none; /* Por defecto, oculta el botón del menú */
+}
+
+@media screen and (max-width: 768px) {
+
+    .menu-container {
+        position: absolute;
+        display: flex; /* Ajusta el diseño para dispositivos móviles */
+        justify-content: space-between; /* Distribuye los elementos horizontalmente */
+        align-items: center; /* Centra los elementos verticalmente */
+        padding: 10px; /* Ajusta el espacio alrededor del menú */
+
+    }
+    
+    .menu-container::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(9, 9, 9, 0.215); /* Fondo semitransparente */
+        backdrop-filter: blur(5px); /* Aplica un filtro de desenfoque */
+        z-index: -1; /* Coloca el fondo borroso detrás del menú */
+        pointer-events: none; /* Permite que los eventos pasen a través del pseudo-elemento */
+        opacity: 0; /* Inicialmente oculta el fondo borroso */
+        transition: opacity 0.3s ease; /* Agrega una transición suave para la opacidad */
+    }
+    
+    .menu-container.active::before {
+        opacity: 1; /* Muestra el fondo borroso cuando el menú está activo */
+    }
+    
+    
+
+    /* Overlay para el área del menú */
+    .menu-toggle {
+        position: absolute;
+        cursor: pointer; /* Cambia el cursor a un puntero al pasar el ratón por encima */
+        display: inline-block;
+        text-decoration: none;
+        margin: 10vh 0 0 0;
+        padding: 10px 20px;
+        color: #dfdede;
+        transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease; /* Agrega la propiedad box-shadow a la transición*/
+        z-index: 1000; /* Asegura que el icono del menú esté en una capa superior */
+
+    }
+
+    .menu-toggle:hover {
+        transform: scale(1.2); /* Aumenta el tamaño del ícono */
+        filter: brightness(3); /* Aumenta el brillo del ícono */
+        filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5)) brightness(120%); /* Aplica un filtro de sombra suave y un filtro de brillo al ícono */
+    }
+
+    .navbar-menu {
+        display: none; /* Por defecto, oculta el menú en dispositivos móviles */
+        position: fixed;
+        z-index: 1000; /* Asegura que el menú esté en una capa superior */
+            top: 50px;
+        left: 20px; /* Ajuste para que el menú esté pegado al borde izquierdo */
+        background: transparent; /* Cambia el color de fondo del menú desplegable a transparente */
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        transition: opacity 0.3s ease; /* Agrega una transición de opacidad */
+        opacity: 0; /* Inicialmente establece la opacidad en 0 para ocultar el menú */
+    }
+    
+    .navbar-menu.active {
+        display: flex; /* Muestra el menú cuando la clase 'active' está presente */
+        flex-direction: column;
+        align-items: flex-start; /* Alinea los elementos del menú a la izquierda */
+        opacity: 1; /* Hace que el menú sea visible al activar la clase 'active' */
+        padding: 0;
+        margin: 0;
+    }
+    
+    
+    /* Estilos para los ítems del menú */
+    #nav-links {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+        margin: 0; /* Restablece cualquier margen previo */
+    }
+    
+    #nav-links li {
+        border-image: linear-gradient(to right, rgba(255, 255, 255, 0), #dfdede, rgba(255, 255, 255, 0)) 2 stretch;
+        text-align: justify;
+        border-bottom: 1px solid #dfdede; /* Línea divisoria entre elementos li */
+        outline: 1px solid transparent; /* Agrega un contorno adicional */
+        filter: brightness(1.5); /* Ajusta el brillo según sea necesario */
+        margin: -10px 0; /* Establece un margen vertical negativo */
+        padding: 0 0 10px 0; /* Ajusta el padding */
+        text-align: start;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    #nav-links li:first-child {
+        margin-top: 10px;
+    }
+
+    #nav-links li:last-child {
+        margin-bottom: -1px; /* Márgenes negativos para superponer la línea divisoria */
+
+    }
+    
+    
+    .navbar-menu.active #nav-links li {
+        opacity: 1; /* Hace que los ítems sean visibles al activar la clase 'active' en el menú */
+        transform: translateX(20px); /* Restaura la posición original de los ítems */
+    }
+    
+    /* Animación de aparición de los ítems del menú */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    h1, h3, p {
+        font-size: 16px; /* Reduce el tamaño del texto */
+        line-height: 1.4; /* Ajusta la altura de línea */
+    }
+
+    /* Ajustes para las imágenes */
+    img {
+        max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+        height: auto; /* Ajusta la altura automáticamente */
+    }
+
+    /* Ajustes para los backgrounds */
+    body {
+        background-size: cover; /* Ajusta el tamaño del fondo para cubrir completamente el contenedor */
+        background-position: center; /* Centra el fondo */
+    }
+
+    /* Ajustes para las secciones */
+    section {
+        padding: 10px; /* Reduce el espacio alrededor del contenido */
+    }
+
+    /* Ajustes específicos para la sección de inicio */
+    #home {
+        padding: 5% 0; /* Reduce el espacio en la parte superior e inferior */
+    }
+
+    .home-Title img {
+        width: 80%; /* Redimensiona la imagen al 80% del ancho del contenedor */
+    }
+
+    .in-dev {
+        font-size: 14px; /* Reduce el tamaño del texto en desarrollo */
+    }
+
+    .info{
+        padding: 10vh 10vw;
+        justify-content: center;
+    }
+}
+
+
+
+
+
+
+
