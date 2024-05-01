@@ -1,12 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const body = document.body;
     const menuToggle = document.querySelector('.menu-toggle');
     const navbarMenu = document.querySelector('.navbar-menu');
     const menuContainer = document.querySelector('.menu-container');
     const links = document.querySelectorAll('.smooth-scroll');
+    const blurOverlay = document.querySelector('.menu-container::before');
 
     menuToggle.addEventListener('click', function() {
         navbarMenu.classList.toggle('active'); // Alternar la clase 'active' en el menú desplegable
         menuContainer.classList.toggle('active'); // Alternar la clase 'active' en el contenedor del menú
+        body.classList.toggle('menu-open'); // Agregar/eliminar clase al body para deshabilitar/permitir el scroll
     
         // Agrega la animación a los ítems del menú cuando se activa el menú desplegable
         if (navbarMenu.classList.contains('active')) {
@@ -14,6 +17,8 @@ document.addEventListener('DOMContentLoaded', function() {
             menuItems.forEach((item, index) => {
                 item.style.animation = `fadeInUp 0.5s ease forwards ${index / 7 + 0.3}s`;
             });
+            // Desactiva los eventos del mouse en el fondo borroso
+            blurOverlay.style.pointerEvents = 'none';
         } else {
             // Si se cierra el menú, reinicia la animación y la opacidad de los ítems
             const menuItems = document.querySelectorAll('#nav-links li');
@@ -22,6 +27,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 item.style.transform = 'translateY(-20px)';
                 item.style.animation = '';
             });
+            // Restaura los eventos del mouse en el fondo borroso
+            blurOverlay.style.pointerEvents = 'auto';
+        }
+    });
+
+    // Cerrar el menú al hacer clic fuera de él
+    window.addEventListener('click', function(event) {
+        if (navbarMenu.classList.contains('active') && !menuContainer.contains(event.target)) {
+            navbarMenu.classList.remove('active');
+            menuContainer.classList.remove('active');
+            body.classList.remove('menu-open');
+            // Restaura los eventos del mouse en el fondo borroso
+            blurOverlay.style.pointerEvents = 'auto';
         }
     });
 
@@ -34,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Close the menu before smooth scroll
                 navbarMenu.classList.remove('active');
                 menuContainer.classList.remove('active');
-                
+                body.classList.remove('menu-open');
                 // Smooth scroll to target element
                 const targetElement = document.querySelector(targetUrl);
                 if (targetElement) {
