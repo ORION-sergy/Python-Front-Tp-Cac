@@ -3,12 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!--Bootstrap local-->
-    <link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.rtl.min.css">
-    <script src="bootstrap-5.3.3-dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
-    
-    <link rel="stylesheet" href="styles.css">
+    <!--JavaScript-->
+    <script src="script.js"></script>
+    <!--Íconos de fontawesome-->
     <script src="https://kit.fontawesome.com/3f5fbf0a8f.js" crossorigin="anonymous"></script>
     <!--CSS-->
     <link rel="stylesheet" href="styles.css">
@@ -25,10 +22,10 @@
             <nav class="navbar-menu">
                 <ul id="nav-links">
                     <li><a href="#info" class="smooth-scroll">+Info</a></li>
-                    <li><a href="pages/galery.html" class="smooth-scroll">Galería</a></li>
+                    <li><a href="pages/gallery.html" class="smooth-scroll">Galería</a></li>
                     <li><a href="/pages/register.html" class="smooth-scroll">Registrarse</a></li>
-                    <li><a href="" class="smooth-scroll">Team</a></li>
-                    <li><a href="" class="smooth-scroll">Redes</a></li>
+                    <li><a href="" class="smooth-scroll">Quiénes somos</a></li>
+                    <li><a href="#footer" class="smooth-scroll">Contactanos</a></li>
                 </ul>
             </nav>
         </div>
@@ -47,30 +44,6 @@
             <div class="in-dev-container">
                 <h1 class="in-dev">JUEGO EN DESARROLLO</h1>
             </div>
-
-            <!--Links-->
-            <ul class="redes"> 
-                <li>
-                    <a href="https://www.youtube.com/@ThePathIntoTheAbyss">
-                        <i class="fa-brands fa-youtube"></i>
-                    </a> <!--Youtube-->
-                </li>
-                <li>            
-                    <a href="https://www.instagram.com/thepathintotheabyss? utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a> <!--Instagram-->
-                </li>
-                <li>
-                    <a href="https://x.com/Abyssthegame">
-                        <i class="fa-brands fa-x-twitter"></i>
-                     </a> <!--Twitter-->
-                </li>
-                <li>
-                    <a href="https://t.co/AwZ2kayxKx">
-                        <i class="fa-brands fa-discord"></i>
-                    </a> <!--Discord-->    
-                </li>            
-            </ul>      
         </section>
 
         <section class="presentation">
@@ -78,25 +51,54 @@
         </section>
 
         <section class="info" id="info">
-            <h1>¿Qué es el abismo?</h1>
-            <p>El juego tendrá foco en Buenos Aires y sus alrededores. El mapa estará dividido en cuatro zonas, con la Ciudad de Buenos Aires como la principal, a la cual llamaremos "El abismo". El concepto de abismo se define por ser la zona cero, donde sucede la primera llegada de los invasores que tendremos que enfrentar en el juego. El orígen de lo que sucedió está difuso, como si todos hubiesen olvidado de qué manera comenzó todo y quién lo hizo.
-            Encontraremos personajes que tienen distintas opiniones y creencias sobre el abismo.</p><br>
-            <p>El abismo es un lugar oscuro con tormentas constantes, donde el clima cambió abruptamente y para siempre, afectando su entorno y la forma de vida. Aquí crecen nuevas formas de vida, creando un ecosistema híbrido entre lo que la tierra provee y lo que viene del cielo. </p><br>
-            <h2>NPCs dinámicos</h2>
-            <p>El juego tendrá personajes a los que podrás conocer en el abismo, que podrán convertirse en tus aliados o enemigos. Estos pueden ser tus acompañantes de viaje o emprender su propia aventura. Cada personaje que conozcas tiene una historia que contar y te dará la oportunidad de interactuar e ir forjando tu propio camino a lo largo del juego.</p><br>
-            <p>Habrá un sistema de radio con el que podrás enterarte de lo que sucede en tu entorno y comunicarte con otros NPCs.</p><br>
-            <h2>Lore</h2>
-            <p>En el abismo muchos culpan a seres extraterrestres de la catástrofe, otros al cambio climático provocado por el hombre, y otros afirman que el mal y la guerra trajeron un mensaje bíblico. Lo que sabemos es que el abismo vino a cambiar el mundo y que está expandiéndose. Quizás no es el único en el mundo.</p><br>
-            <p>En el centro del abismo podrás encontrarte con otras facciones y otras naciones que, por lo que podemos entender, han venido al abismo en busca de nuevos recursos naturales. Esto nos conduce a movernos por un mundo de territorios políticos, donde los habitantes nativos de esta tierra luchan contra invasores humanos además de fuerzas alienígenas. Aquí tendrás la opción de formar parte de la lucha o hacer tu propio camino, incluso podrás cambiar de bando. </p><br>
-            <p>El abismo está rodeado por 3 ÁREAS: el sur, el norte y el oeste. Estas zonas son más rurales y ricas en folklore. La intención es recrear la atmósfera y el estilo de los alrededores reales de Buenos Aires.</p><br>
-            <p>El sur empezará con los bosques de Ezeiza, con un clima templado más estable, abarcando la carretera hasta llegar a las afueras de la ciudad. El norte empezará con Zarate, bajando por la Ruta 9, caracterizado por un clima más árido y seco. La zona Oeste mostrará un poco de Morón y General Paz, con un clima helado y cubierto de nieve.</p>
-            <h1>Dificultad</h1>
-            <p>El juego apunta a una dificultad extrema, será necesario navegar con cuidado. El diseño de la ciudad está pensado como un laberinto y el juego no proporcionará un mapa, todo dependerá de la navegación pura. </p><br>
-            <p></p><br>
+            <div class="info-container">
+                <h1>¿Qué es el abismo?</h1>
+                <p>"El abismo" es la Ciudad de Buenos Aires, llamada así por ser la zona cero, donde sucede la primera llegada de los invasores que tendremos que enfrentar en el juego.</p>
+            </div>
+        
+            <div class="info-container">
+                <h2>NPCs dinámicos</h2>
+                <p>Vas a encontrar personajes en el abismo y sus alrededores, cada uno con una historia que contar. Podes hacer de ellos tus compañeros de viaje, convertirlos en tus aliados o incluso tus enemigos.</p>
+            </div>
+        
+            <div class="info-container">
+                <h2>Ambientación</h2>
+                <p>Podrás explorar la ciudad de Buenos Aires, los bosques de Ezeiza y sus alrededores, cada una con su propio ecosistema afectado por el abismo.</p>
+            </div>
+        
+            <div class="info-container">
+                <h2>Dificultad</h2>
+                <p>El juego apunta a una dificultad extrema y no hay mapa, así que tendrás que confiar en tu instinto y navegar con cuidado. </p>
+            </div>
         </section>
         
+        
     </main>
-    <footer>
+    <footer id="footer">
+                    <!--Links-->
+                    <ul class="redes"> 
+                        <li>
+                            <a href="https://www.youtube.com/@ThePathIntoTheAbyss">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a> <!--Youtube-->
+                        </li>
+                        <li>            
+                            <a href="https://www.instagram.com/thepathintotheabyss? utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a> <!--Instagram-->
+                        </li>
+                        <li>
+                            <a href="https://x.com/Abyssthegame">
+                                <i class="fa-brands fa-x-twitter"></i>
+                             </a> <!--Twitter-->
+                        </li>
+                        <li>
+                            <a href="https://t.co/AwZ2kayxKx">
+                                <i class="fa-brands fa-discord"></i>
+                            </a> <!--Discord-->    
+                        </li>            
+                    </ul>      
+        
     </footer>
 </body>
 </html>
