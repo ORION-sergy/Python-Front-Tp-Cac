@@ -6,6 +6,7 @@
 
 html, body{
     height: 100%;
+    background-color: black;
 }
 
 header{
@@ -90,13 +91,17 @@ nav{
 .home-Title{
     margin-top: 30vh; /* Ajusta según sea necesario */
     padding: 10vh 0;
+    filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.475)); /* Utiliza drop-shadow para aplicar el sombreado */
+
 }
 
 .home-Title a{
     display: inline-block;
     margin: 0;
     padding: 0;
-    scale: 100%
+    scale: 100%;
+    filter: drop-shadow(10px 10px 20px rgb(0, 0, 0)); /* Utiliza drop-shadow para aplicar el sombreado */
+
 }
 
 .home-Title a img{
@@ -111,32 +116,45 @@ nav{
     margin: 0;
 }
 
+.in-dev-container{
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Agrega un efecto de sombra al texto para que brille */
+    filter: drop-shadow( 0px 1px 3px  rgb(0, 0, 0)); /* Utiliza drop-shadow para aplicar el sombreado */
 
-
-/*Animación palpitante*/
-@keyframes pulse {
-    0% {
-        opacity: 1;
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.03);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
 }
 
 .in-dev{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 250%;
+    font-size: 280%;
     font-weight: 10;
     font-style: italic;
     color: #ededed;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Agrega un efecto de sombra al texto para que brille */
+    filter: drop-shadow(10px 10px 20px rgb(0, 0, 0)); /* Utiliza drop-shadow para aplicar el sombreado */
     text-rendering: optimizeLegibility; /* Hace que el texto se vea más suave y legible */
-    animation: pulse 3s infinite; /* Aplica la animación 'pulse' durante 2 segundos y la repite infinitamente */
+}
+
+.arrows-down{
+    font-size: 2vw;
+    color: #ededed;
+    text-rendering: optimizeLegibility; /* Hace que el texto se vea más suave y legible */
+    bottom: 0; /* Alinea el contenedor en la parte inferior */
+    transform: translateY(210%); 
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Agrega un efecto de sombra al texto para que brille */
+    animation: Down 2.2s infinite;
+}
+
+@keyframes Down {
+    0%{
+        transform: translateY(210%);
+    }
+
+    50%{
+        transform: translateY(235%);
+    }
+
+    100%{
+        transform: translateY(210%);
+    }
 }
 
 .presentation {
@@ -191,11 +209,11 @@ nav{
     color: #dfdede; /* Color de título personalizado */
 }
 
-h1 {
+.info-container h1 {
     font-size: 5vw;
 }
 
-h2 {
+.info-container h2 {
     font-size: 3vw;
 }
 
@@ -218,7 +236,6 @@ footer{
     align-items: center;
 
     border-top: 1px solid transparent;
-    border-bottom: 1px solid transparent;
     border-image: linear-gradient(to right, rgba(255, 255, 255, 0), #dfdede, rgba(255, 255, 255, 0)) 2 stretch;
     filter: brightness(1.5); /* Ajusta el brillo según sea necesario */
     outline: 1px solid transparent; /* Agrega un contorno adicional */
@@ -257,7 +274,7 @@ footer{
 
 /*Menú desplegable (para mobile)*/
 
-.menu-toggle, .fa-solid, .fa-bars {
+.menu-toggle, #menu-icon{
     display: none; /* Por defecto, oculta el botón del menú */
 }
 
@@ -310,10 +327,10 @@ footer{
 
     /* Overlay para el área del menú */
     .menu-toggle {
+        display: inline-block;
         scale: 250%;
         position: absolute;
         cursor: pointer; /* Cambia el cursor a un puntero al pasar el ratón por encima */
-        display: inline-block;
         text-decoration: none;
         margin: 10vh 0 0 0;
         padding: 20% 100%;
@@ -326,6 +343,10 @@ footer{
         transform: scale(1.2); /* Aumenta el tamaño del ícono */
         filter: brightness(3); /* Aumenta el brillo del ícono */
         filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5)) brightness(120%); /* Aplica un filtro de sombra suave y un filtro de brillo al ícono */
+    }
+
+    #menu-icon{
+        display: inline-block;
     }
 
     .navbar-menu {
@@ -414,7 +435,7 @@ footer{
         justify-content: center;
         align-items: center;
         display: flex;
-        padding: 0 0 15vh 0;
+        padding: 0 0 10vh 0;
         margin-top: 12vh;
     }
 
@@ -442,9 +463,30 @@ footer{
         text-align: center;
         display: flex;
         position: inherit;
-        font-size: 7vw;
+        font-size: 9vw;
         filter: drop-shadow(10px 10px 20px rgb(0, 0, 0)); /* Utiliza drop-shadow para aplicar el sombreado */
 
+    }
+
+    .arrows-down{
+        font-size: 300%;
+        padding: 0;
+        margin: 0;
+        transform: translateY(300%); 
+    }
+
+    @keyframes Down {
+        0%{
+            transform: translateY(300%);
+        }
+
+        50%{
+            transform: translateY(320%);
+        }
+
+        100%{
+            transform: translateY(300%);
+        }
     }
 
     
@@ -499,12 +541,90 @@ footer{
         align-items: center;
         margin: 2vh 0;
     }
+
     .redes li a i{
         scale: 100%;
     }
     
 }
 
+
+@media screen and (min-width: 2000px) {
+
+    #nav-links li a{
+        font-size: 200%;
+    }
+
+    #home{
+        background: none;
+        background: url(/Assets/img/Window\ grey.png);
+        background-size: 110%;
+        background-position-x: 70%;
+    }
+
+    .home-Title{
+        padding-top: 0;
+    }
+
+    .home-Title a{
+        padding-top: 0;
+        margin-top: 0;
+        scale: 150%;
+        transform: translateY(-10%);
+        filter: drop-shadow(10px 10px 20px rgb(0, 0, 0)); /* Utiliza drop-shadow para aplicar el sombreado */
+    }
+
+    .home-Title a img{
+        filter: drop-shadow(10px 10px 20px rgb(0, 0, 0)); /* Utiliza drop-shadow para aplicar el sombreado */
+
+    }
+
+    .in-dev-container{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        position: inherit;
+        filter: drop-shadow(10px 10px 20px rgb(0, 0, 0)); /* Utiliza drop-shadow para aplicar el sombreado */
+        transform: translateY(130%);
+    }
+
+    .in-dev{
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        position: inherit;
+        font-size: 3vw;
+        filter: drop-shadow(10px 10px 20px rgb(0, 0, 0)); /* Utiliza drop-shadow para aplicar el sombreado */
+
+    }
+
+    .arrows-down{
+        transform: translateY(480%); 
+    }
+
+    @keyframes Down {
+        0%{
+            transform: translateY(480%);
+        }
+
+        50%{
+            transform: translateY(500%);
+        }
+
+        100%{
+            transform: translateY(480%);
+        }
+    }
+
+    .presentation{
+        border-top: 0.5px solid transparent;
+        border-bottom: 1px solid transparent;
+        border-image: linear-gradient(to right, rgba(255, 255, 255, 0), #dfdede, rgba(255, 255, 255, 0)) 2 stretch;
+        filter: brightness(1.5); /* Ajusta el brillo según sea necesario */
+        outline: 1px solid transparent; /* Agrega un contorno adicional */    
+    }
+}
 
 
 
