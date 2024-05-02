@@ -8,6 +8,7 @@
     <title>Gallery</title>
 </head>
 <style>
+    /* URL FUENTE DE TEXTO */
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jersey+25&family=Oswald:wght@200..700&display=swap');
     *{
         margin: 0;
@@ -38,6 +39,7 @@
         transform: scale(1.2);
         filter: brightness(10);
     }
+    /* FUENTE TEXTO */
     .bebas-neue-regular {
         font-family: "Bebas Neue", sans-serif;
         font-weight: 400;
@@ -49,8 +51,8 @@
         border-top: 1px solid transparent;
         border-bottom: 1px solid transparent;
         border-image: linear-gradient(to right, rgba(255, 255, 255, 0), #dfdede, rgba(255, 255, 255, 0)) 2 stretch;
-        filter: brightness(1.5); /* Ajusta el brillo según sea necesario */
-        outline: 1px solid transparent; /* Agrega un contorno adicional */
+        filter: brightness(1.5); 
+        outline: 1px solid transparent;
     }
     /* LIGHTBOX */
     .lightbox {
@@ -79,7 +81,6 @@
         background-color: white;
         border-radius: 5px;
     }
-    
 </style>
 <body class="">
     <!-- TOP SECTION -->
@@ -185,31 +186,31 @@
     <section class="bg-black text-white">
         <div class="sm:w-[75%] w-[80%] mx-auto py-12">
             <div class="mx-auto gap-x-2 gap-y-2 sm:grid sm:grid-cols-3 grid grid-cols-2">
-                <div class="w-full">
+                <div class="w-full hover:opacity-50">
                     <img class="imgGrid img1 object-cover rounded-md cursor-pointer lightbox-trigger" src="../Assets/img/Characters.jpg" alt="Characters">
                 </div>
-                <div class="w-full">
+                <div class="w-full hover:opacity-50">
                     <img class="imgGrid img2 object-cover rounded-md cursor-pointer" src="../Assets/img/fear.png" alt="Fear">
                 </div>
-                <div class="w-full">
+                <div class="w-full hover:opacity-50">
                     <img class="imgGrid img3 object-cover rounded-md cursor-pointer" src="../Assets/img/Day.jpg" alt="Day">
                 </div>
-                <div class="w-full">
+                <div class="w-full hover:opacity-50">
                     <img class="imgGrid img4 object-cover rounded-md cursor-pointer" src="../Assets/img/Falcon.jpg" alt="Falcon">
                 </div>
-                <div class="w-full">
+                <div class="w-full hover:opacity-50">
                     <img class="imgGrid img5 object-cover rounded-md cursor-pointer" src="../Assets/img/Guns.jpg" alt="Guns">
                 </div>
-                <div class="w-full">
+                <div class="w-full hover:opacity-50">
                     <img class="imgGrid img6 object-cover rounded-md cursor-pointer" src="../Assets/img/hole.png" alt="Hole">
                 </div>
-                <div class="w-full">
+                <div class="w-full hover:opacity-50">
                     <img class="imgGrid img7 object-cover rounded-md cursor-pointer" src="../Assets/img/woods Stalker.png" alt="Woods Stalker">
                 </div>
-                <div class="w-full">
+                <div class="w-full hover:opacity-50">
                     <img class="imgGrid img8 object-cover rounded-md cursor-pointer" src="../Assets/img/buenos aires" alt="Buenos Aires">
                 </div>
-                <div class="w-full">
+                <div class="w-full hover:opacity-50">
                     <img class="imgGrid img9 object-cover rounded-md cursor-pointer" src="../Assets/img/fire.webp" alt="Fire">
                 </div>
             </div>
@@ -240,22 +241,21 @@
         </div>
         <!-- DEVELOPERS -->
         <div class="w-fit py-2 mx-auto text-[10px] text-center bg-black text-white" style="color: #DFDED040;">
-            <p class="hover:text-white hover:cursor-pointer w-fit mx-auto">&copy;2024 Todos los derechos reservados.</p>
-            <p class="hover:text-white hover:cursor-pointer">Sitio Web desarrollado por: Sergio Ramos, Bruno Segovia, Santiago Rojas</p>
-            <a class="text-[#0000EE] hover:underline font-bold hover:cursor-pointer" href="">Contactanos</a>
+            <p class="hover:text-white w-fit mx-auto">&copy;2024 Todos los derechos reservados.</p>
+            <p class="hover:text-white">Sitio Web desarrollado por: Sergio Ramos, Bruno Segovia, Santiago Rojas</p>
+            <a class="text-[#0000EE] hover:underline font-bold" href="">Contactanos</a>
         </div>
     </footer>
     <script>
-        // Función para abrir el lightbox y mostrar la imagen correspondiente
+        //ABRE IMAGEN EN LIGHTBOX 
         function abrirLightbox(url) {
             lightboxImagen.src = url;
             lightbox.style.display = "block";
         }
-    
-        // Escuchar el evento de clic en cada imagen
+        //ITERA CADA ELEMENTO IMGGRID Y LE ASIGNA EVENTO CLICK PARA QUE EJECUTE ABRILIGHTBOX
         document.querySelectorAll('.imgGrid').forEach(item => {
             item.addEventListener('click', event => {
-                const url = event.target.src; // Obtener la URL de la imagen
+                const url = event.target.src; // RESCATA URL DE LA IMAGEN
                 abrirLightbox(url);
             });
         });
