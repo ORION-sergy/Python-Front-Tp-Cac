@@ -59,7 +59,7 @@ nav{
 #nav-links li a{
     text-decoration: none;
     color: rgb(223, 222, 222);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Bebas Neue", sans-serif;
     font-size: 130%;
     font-weight: 300; /* Ajusta el grosor de la fuente a 300 (más delgada) o a tu preferencia */
 }
@@ -91,8 +91,6 @@ nav{
 .home-Title{
     margin-top: 30vh; /* Ajusta según sea necesario */
     padding: 10vh 0;
-    filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.475)); /* Utiliza drop-shadow para aplicar el sombreado */
-
 }
 
 .home-Title a{
@@ -169,11 +167,10 @@ nav{
 
 .presentation h3{
     color: #dfdede;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Bebas Neue", sans-serif;
     font-size: 200%;
     font-weight: 200;
     font-style: italic;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.687); /* Agrega un efecto de sombra al texto para que brille */
     text-rendering: optimizeLegibility; /* Hace que el texto se vea más suave y legible */
     text-align: center;
     transition: transform 3s ease, filter 0.3s ease;
@@ -182,6 +179,8 @@ nav{
 .presentation h3:hover{
     transform: scale(1.05); /* Aumenta el tamaño del ícono */
     filter: brightness(10); /* Aumenta el brillo del ícono */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.687); /* Agrega un efecto de sombra al texto para que brille */
+
 }
 
 .info {
@@ -194,8 +193,8 @@ nav{
     align-items: center;
     text-align: center;
     margin: 0;
-    color: #dfdede;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #bababa;
+    font-family: "Bebas Neue", sans-serif;
 }
 
 .info-container {
@@ -278,7 +277,7 @@ footer{
     display: none; /* Por defecto, oculta el botón del menú */
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1024px) {
 
     /* Ajustes para las imágenes */
     img {
@@ -626,6 +625,26 @@ footer{
     }
 }
 
+/*Para pantallas móviles especiales*/
+@media screen and (max-width: 400px) {
+    .arrows-down{
+        transform: translateY(480%); 
+    }
+
+    @keyframes Down {
+        0%{
+            transform: translateY(200%);
+        }
+
+        50%{
+            transform: translateY(230%);
+        }
+
+        100%{
+            transform: translateY(200%);
+        }
+    }
+}
 
 
 
