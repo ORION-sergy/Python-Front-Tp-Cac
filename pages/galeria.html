@@ -3,247 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <script src="https://kit.fontawesome.com/3f5fbf0a8f.js" crossorigin="anonymous"></script>
-    <title>Gallery</title>
+    <link rel="stylesheet" href="galeria.css">
+    <title>Galeria</title>
 </head>
-<style>
-    /* URL FUENTE DE TEXTO */
-    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jersey+25&family=Oswald:wght@200..700&display=swap');
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    ::-webkit-scrollbar {
-        display: none; 
-    }
-    .topSection {
-        background-image: url('../Assets/img/fondoGaleria.jpg');
-        background-size: cover;
-        background-position: center;
-        height: 100vh;
-    }
-    .midSection {
-        background-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 20%),
-        linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 30%),
-        linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 20%), 
-        url('../Assets/img/galeriaMidSection.jpg');
-        background-size: cover;
-        background-position: center;
-        min-height: 100vh;
-    }
-    a:hover i {
-        color: #ffffff;
-        text-decoration: none;
-        transform: scale(1.2);
-        filter: brightness(10);
-    }
-    /* FUENTE TEXTO */
-    .bebas-neue-regular {
-        font-family: "Bebas Neue", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-    }
-    .presentation {
-        background-color: black;
-        padding: 10vh 20vw;
-        border-top: 1px solid transparent;
-        border-bottom: 1px solid transparent;
-        border-image: linear-gradient(to right, rgba(255, 255, 255, 0), #dfdede, rgba(255, 255, 255, 0)) 2 stretch;
-        filter: brightness(1.5); 
-        outline: 1px solid transparent;
-    }
-    /* LIGHTBOX */
-    .lightbox {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
-        z-index: 999;
-    }
-    .lightbox img {
-        display: block;
-        margin:  auto;
-        max-width: 92%;
-        max-height: 92%;
-    }
-    #cerrarLightbox {
-        margin: 0 auto;
-        position: relative;
-        top: 10px;
-        right: 10px;
-        padding: 5px 10px;
-        color: black;
-        background-color: white;
-        border-radius: 5px;
-    }
-</style>
-<body class="">
+
+<body>
     <!-- TOP SECTION -->
-    <section class="h-fit bg-black text-white">
+    <section class="topSection">
         <!-- NAV -->
-        <div class="fixed z-10 bebas-neue-regular">
-            <div class="md:p-4 p-1"> 
-                <div class="flex items-center" 
-                    style="">
-                    <a href="../index.html" class="flex items-center gap-x-2">
-                        <i class="fa-solid fa-arrow-left sm:-mt-[2px] -mt-[1.6px] md:text-[20px] sm:text-[18px] text-[12px]"></i>
-                        <p class="sm:text-[17px] text-[11px] pr-1 transform hover:scale-110 transition-all duration-0 hover:brightness-150">INICIO</p>
+        <nav class="navG">
+            <div class="navG-container"> 
+                <div class="navG-content">
+                    <a href="../index.html">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <p>INICIO</p>
                     </a>
-                    <p class="sm:text-[17px] text-[11px]">/ GALERIA</p>
+                    <p>/ GALERIA</p>
                 </div>
             </div>
-        </div>
+        </nav>
         <!-- VIDEO -->
-        <div class="h-auto mx-auto w-full">
-            <!-- <iframe class="" id="video" style="height: 100vh; width: 100vw;" src="https://www.youtube.com/embed/9s-5tR0fGfM?enablejsapi=1&controls=1&modestbranding=1" frameborder="0"></iframe>
-            <video src="https://www.youtube.com/embed/9s-5tR0fGfM?enablejsapi=1&controls=1"></video> -->
-            <video class="lg:h-screen h-auto mx-auto rounded-b-lg" src="../Assets/img/videoGtry2.mp4"  muted controls autoplay loop></video>
+        <div class="videoG-container">
+            <!-- <iframe class="" id="video" style="height: 100vh; width: 100vw;" src="https://www.youtube.com/embed/9s-5tR0fGfM?enablejsapi=1&controls=1&modestbranding=1" frameborder="0"></iframe> -->
+            <video src="../Assets/img/videoFinal.mp4" muted controls autoplay loop></video>
         </div>
         <!-- LINKS LATERALES -->
-        <div class="fixed top-0 bottom-0 right-0 flex items-center justify-center z-10">
-            <ul class="mr-4 ">
-                <li class="text-center sm:py-1 py-0">
-                    <a href="https://www.youtube.com/@ThePathIntoTheAbyss">
-                        <i class="sm:text-[20px] text-[12px] fa-brands fa-youtube"></i>
+        <div class="linksLatG">
+            <ul>
+                <li>
+                    <a href="https://www.youtube.com/@ThePathIntoTheAbyss" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
                     </a>
                 </li>
-                <li class="text-center sm:py-1 py-0">            
-                    <a href="https://www.instagram.com/thepathintotheabyss? utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
-                        <i class="sm:text-[20px] text-[12px] fa-brands fa-instagram"></i>
+                <li>            
+                    <a href="https://www.instagram.com/thepathintotheabyss? utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
                     </a>
                 </li>
-                <li class="text-center sm:py-1 py-0">
-                    <a href="https://x.com/Abyssthegame">
-                        <i class="sm:text-[20px] text-[12px] fa-brands fa-x-twitter"></i>
+                <li>
+                    <a href="https://x.com/Abyssthegame" target="_blank">
+                        <i class="fa-brands fa-x-twitter"></i>
                     </a>
                 </li>
-                <li class="text-center sm:py-1 py-0">
-                    <a href="https://t.co/AwZ2kayxKx">
-                        <i class="sm:text-[20px] text-[12px] fa-brands fa-discord"></i>
+                <li>
+                    <a href="https://t.co/AwZ2kayxKx" target="_blank">
+                        <i class="fa-brands fa-discord"></i>
                     </a>
                 </li>            
             </ul>
         </div>
     </section>
     <!-- MID SECTION -->
-    <section class="midSection bebas-neue-regular bg-black text-white 
-        sm:pb-[80px] pb-[20px]" >
+    <section class="midSection" >
         <!-- 1st -->
-        <div class="pt-[80px] w-[80%] mx-auto items-center justify-center gap-x-[90px]
-            sm:flex flex-wrap">
-            <div class="h-fit">
+        <div class="container1st">
+            <div class="container1st-container">
                 <!-- IMG PATH -->
-                <div class="mx-auto
-                    sm:max-w-[300px] max-w-[150px]">
-                    <img class="sm:pb-10 pb-5" src="../Assets/img/The-abbys-3-removebg.png" alt="">
+                <div class="imgCartelContainer">
+                    <img src="../Assets/img/The-abbys-3-removebg.png" alt="Abyss">
                 </div>
                 <!-- TEXTO -->
-                <p class="max-w-[480px] sm:text-[21px] text-[11px] text-center pb-6">un videojuego que promete llevar a los jugadores a un Buenos Aires futurista, transformado por un conflicto bélico.</p>
+                <p>un videojuego que promete llevar a los jugadores a un Buenos Aires futurista, transformado por un conflicto bélico.</p>
             </div>
-            <div class="w-fit">
-                <img class=" rounded-md" src="../Assets/img/fondoGaleria.jpg" alt="">
+            <div class="imgContainer1st">
+                <img src="../Assets/img/fondoGaleria.jpg" alt="Obelisco invasion">
             </div>
         </div>
         <!-- SEPARADOR -->
-        <div class="md:hidden block mt-[20px] text-center">
+        <div class="sep">
             <i class="fa-solid fa-ellipsis"></i>
         </div>
         <!-- 2nd -->
-        <div class="gap-x-[90px] mx-auto
-            xl:w-fit w-[80%]  
-            md:mt-[100px] mt-[20px] 
-            md:grid md:grid-cols-2 grid grid-cols-1">
+        <div class="container2nd">
             <!-- IMAGEN -->
-            <div class="md:pb-0 pb-[20px] col-auto w-fit  md:max-w-[500px]">
-                <img class="rounded-md" src="../Assets/img/gameplay1.png" alt="">
+            <div class="cont2ndImg">
+                <img src="../Assets/img/gameplay1.png" alt="enemy train-rail">
             </div>
             <!-- TEXTO -->
-            <div class="h-full col-auto flex items-center justify-center">
-                <p class="min-w-[280px] max-w-[480px] sm:text-[21px] text-[11px] text-center">Los jugadores se sumergirán en una experiencia en primera persona, enfrentándose a enemigos y sobreviviendo en un entorno hostil.</p>
+            <div class="cont2ndTxt">
+                <p>Los jugadores se sumergirán en una experiencia en primera persona, enfrentándose a enemigos y sobreviviendo en un entorno hostil.</p>
             </div>
         </div>
         <!-- 3rd -->
-        <div class="mx-auto gap-x-[90px] mt-[20px]
-            xl:w-fit w-[80%]
-            md:mt-[100px] mt-[20px]
-            md:grid md:grid-cols-2 grid grid-cols-1">
+        <div class="container3rd">
             <!-- IMAGEN -->
-            <div class="w-fit md:max-w-[500px] md:order-2 md:pb-0 pb-[20px] mx-auto">
-                <img class=" rounded-md" src="../Assets/img/arg.jpg" alt="">
+            <div class="cont3rdImg">
+                <img src="../Assets/img/arg.jpg" alt="Argentine warrior">
             </div>
             <!-- TEXTO -->
-            <div class="h-fit md:order-1 h-full col-auto flex items-center justify-center">
-                <p class="max-w-[480px] sm:text-[21px] text-[11px] text-center">El juego promete ser una carta de amor a Buenos Aires, retratando locaciones icónicas como la Avenida 9 de Julio, la Biblioteca Nacional, la Plaza de Mayo, los bosques de Ezeiza, y mucho más.</p>
+            <div class="cont3rdImgTxt">
+                <p>El juego promete ser una carta de amor a Buenos Aires, retratando locaciones icónicas como la Avenida 9 de Julio, la Biblioteca Nacional, la Plaza de Mayo, los bosques de Ezeiza, y mucho más.</p>
             </div>
         </div>
     </section>
     <!-- BOTTOM SECTION -->
-    <section class="bg-black text-white">
-        <div class="sm:w-[75%] w-[80%] mx-auto py-12">
-            <div class="mx-auto gap-x-2 gap-y-2 sm:grid sm:grid-cols-3 grid grid-cols-2">
-                <div class="w-full hover:opacity-50">
-                    <img class="imgGrid img1 object-cover rounded-md cursor-pointer lightbox-trigger" src="../Assets/img/Characters.jpg" alt="Characters">
+    <section class="bottomSection bg-black">
+        <div class="bottomGridContainer">
+            <!-- GRILLA DE IMAGENES -->
+            <div class="bottomGridContainer-content">
+                <div>
+                    <img class="imgGrid img1" src="../Assets/img/Characters.jpg" alt="Characters">
                 </div>
-                <div class="w-full hover:opacity-50">
-                    <img class="imgGrid img2 object-cover rounded-md cursor-pointer" src="../Assets/img/fear.png" alt="Fear">
+                <div>
+                    <img class="imgGrid img2" src="../Assets/img/fear.png" alt="Fear">
                 </div>
-                <div class="w-full hover:opacity-50">
-                    <img class="imgGrid img3 object-cover rounded-md cursor-pointer" src="../Assets/img/Day.jpg" alt="Day">
+                <div>
+                    <img class="imgGrid img3" src="../Assets/img/Day.jpg" alt="Day">
                 </div>
-                <div class="w-full hover:opacity-50">
-                    <img class="imgGrid img4 object-cover rounded-md cursor-pointer" src="../Assets/img/Falcon.jpg" alt="Falcon">
+                <div>
+                    <img class="imgGrid img4" src="../Assets/img/Falcon.jpg" alt="Falcon">
                 </div>
-                <div class="w-full hover:opacity-50">
-                    <img class="imgGrid img5 object-cover rounded-md cursor-pointer" src="../Assets/img/Guns.jpg" alt="Guns">
+                <div>
+                    <img class="imgGrid img5" src="../Assets/img/Guns.jpg" alt="Guns">
                 </div>
-                <div class="w-full hover:opacity-50">
-                    <img class="imgGrid img6 object-cover rounded-md cursor-pointer" src="../Assets/img/hole.png" alt="Hole">
+                <div>
+                    <img class="imgGrid img6" src="../Assets/img/hole.png" alt="Hole">
                 </div>
-                <div class="w-full hover:opacity-50">
-                    <img class="imgGrid img7 object-cover rounded-md cursor-pointer" src="../Assets/img/woods Stalker.png" alt="Woods Stalker">
+                <div>
+                    <img class="imgGrid img7" src="../Assets/img/woods Stalker.png" alt="Woods Stalker">
                 </div>
-                <div class="w-full hover:opacity-50">
-                    <img class="imgGrid img8 object-cover rounded-md cursor-pointer" src="../Assets/img/buenos aires" alt="Buenos Aires">
+                <div>
+                    <img class="imgGrid img8" src="../Assets/img/buenos aires" alt="Buenos Aires">
                 </div>
-                <div class="w-full hover:opacity-50">
-                    <img class="imgGrid img9 object-cover rounded-md cursor-pointer" src="../Assets/img/fire.webp" alt="Fire">
+                <div>
+                    <img class="imgGrid img9" src="../Assets/img/fire.webp" alt="Fire">
                 </div>
             </div>
             <!-- LIGHTBOX -->
-            <div id="lightbox" class="lightbox sm:top-0 top-[30%]">
-                <img class="" id="lightboxImagen" src="" alt="Descripción de la imagen">
-                <div class="w-full mx-auto text-center">
-                    <button class="sm:py-[5px] py-[2.5px] mx-auto" id="cerrarLightbox">Cerrar</button>
+            <div id="lightbox" class="lightbox">
+                <img id="lightboxImagen" src="" alt="galeria">
+                <div>
+                    <button id="cerrarLightbox">Cerrar</button>
                 </div>
             </div>                
         </div>
     </section>
     <!-- FOOTER -->
-    <footer class="bg-black text-white">
-        <div class="presentation bebas-neue-regular w-fit mx-auto">
-            <div class="sm:text-[17px] text-[15px] flex justify-between items">
-                <!-- IMAGENES -->
-                <img class="max-w-[100px]" src="../Assets/img/18.png" alt="">
+    <footer>
+        <div class="presentation">
+            <div class="footerContainer">
+                <!-- IMAGEN -->
+                <img src="../Assets/img/18.png" alt="18+">
                 <!-- LINKS -->
-                <div class="md:flex sm:justify-between w-[80%] mx-auto pl-2">
-                    <div class="linqs pt-1"><a class="hover:underline" href="">Soporte</a></div>
-                    <div class="linqs pt-1"><a class="hover:underline" href="">Suscribirse</a></div>
-                    <div class="linqs pt-1"><a class="hover:underline" href="">Informacion Legal</a></div>
-                    <div class="linqs pt-1"><a class="hover:underline" href="">Accesibilidad</a></div>
+                <div class="linqsContainer ">
+                    <div class="linqs"><a href="#">Soporte</a></div>
+                    <div class="linqs"><a href="#">Suscribirse</a></div>
+                    <div class="linqs"><a href="#">Informacion Legal</a></div>
+                    <div class="linqs"><a href="#">Accesibilidad</a></div>
                 </div>
             </div>
-            <p class="mt-1 ml-1 sm:text-[17px] text-[15px]">ADVERTENCIA: Este juego contiene violencia intensa, escenas de combate gráfico y no es apto para menores de 18 años</p>
+            <p>ADVERTENCIA: Este juego contiene violencia intensa, escenas de combate gráfico y no es apto para menores de 18 años</p>
         </div>
         <!-- DEVELOPERS -->
-        <div class="w-fit py-2 mx-auto text-[10px] text-center bg-black text-white" style="color: #DFDED040;">
-            <p class="hover:text-white w-fit mx-auto">&copy;2024 Todos los derechos reservados.</p>
-            <p class="hover:text-white">Sitio Web desarrollado por: Sergio Ramos, Bruno Segovia, Santiago Rojas</p>
-            <a class="text-[#0000EE] hover:underline font-bold" href="">Contactanos</a>
+        <div class="devs">
+            <p>&copy;2024 Todos los derechos reservados.</p>
+            <p>Sitio Web desarrollado por: Sergio Ramos, Bruno Segovia, Santiago Rojas</p>
+            <a href="#">Contactanos</a>
         </div>
     </footer>
     <script>
@@ -252,20 +169,22 @@
             lightboxImagen.src = url;
             lightbox.style.display = "block";
         }
-        //ITERA CADA ELEMENTO IMGGRID Y LE ASIGNA EVENTO CLICK PARA QUE EJECUTE ABRILIGHTBOX
+        //ITERA CADA ELEMENTO .IMGGRID Y LE ASIGNA EVENTO CLICK PARA QUE EJECUTE FUNC ABRIRLIGHTBOX
         document.querySelectorAll('.imgGrid').forEach(item => {
             item.addEventListener('click', event => {
                 const url = event.target.src; // RESCATA URL DE LA IMAGEN
                 abrirLightbox(url);
             });
         });
-    
-        // Escuchar el evento de clic en el botón de cerrar
+        // EVENTO CERRAR LIGHTBOX PARA BOTON
         cerrarLightbox.addEventListener("click", function() {
             lightbox.style.display = "none";
         });
-    
-        // Escuchar el evento de tecla presionada
+        //CERRAR LIGHTBOX CLICKEANDO AFUERA DE LA IMAGEN
+        lightbox.addEventListener("click", function() {
+            lightbox.style.display = "none";
+        });
+        // CERRAR LIGHTBOX CON TECLA "ESC"
         document.addEventListener("keydown", function(event) {
             if (event.key === "Escape") {
                 lightbox.style.display = "none";
