@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="https://kit.fontawesome.com/3f5fbf0a8f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="galeria.css">
+    <title>Galeria</title>
+</head>
+
+<body>
+    <!-- TOP SECTION -->
+    <section class="topSection">
+        <!-- NAV -->
+        <nav class="navG">
+            <div class="navG-container"> 
+                <div class="navG-content">
+                    <a href="../index.html">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <p>INICIO</p>
+                    </a>
+                    <p>/ GALERIA</p>
+                </div>
+            </div>
+        </nav>
+        <!-- VIDEO -->
+        <div class="videoG-container">
+            <!-- <iframe class="" id="video" style="height: 100vh; width: 100vw;" src="https://www.youtube.com/embed/9s-5tR0fGfM?enablejsapi=1&controls=1&modestbranding=1" frameborder="0"></iframe> -->
+            <video src="../Assets/img/videoFinal.mp4" muted controls autoplay loop></video>
+        </div>
+        <!-- LINKS LATERALES -->
+        <div class="linksLatG">
+            <ul>
+                <li>
+                    <a href="https://www.youtube.com/@ThePathIntoTheAbyss" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </li>
+                <li>            
+                    <a href="https://www.instagram.com/thepathintotheabyss? utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://x.com/Abyssthegame" target="_blank">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://t.co/AwZ2kayxKx" target="_blank">
+                        <i class="fa-brands fa-discord"></i>
+                    </a>
+                </li>            
+            </ul>
+        </div>
+    </section>
+    <!-- MID SECTION -->
+    <section class="midSection" >
+        <!-- 1st -->
+        <div class="container1st">
+            <div class="container1st-container">
+                <!-- IMG PATH -->
+                <div class="imgCartelContainer">
+                    <img src="../Assets/img/The-abbys-3-removebg.png" alt="Abyss">
+                </div>
+                <!-- TEXTO -->
+                <p>un videojuego que promete llevar a los jugadores a un Buenos Aires futurista, transformado por un conflicto bélico.</p>
+            </div>
+            <div class="imgContainer1st">
+                <img src="../Assets/img/fondoGaleria.jpg" alt="Obelisco invasion">
+            </div>
+        </div>
+        <!-- SEPARADOR -->
+        <div class="sep">
+            <i class="fa-solid fa-ellipsis"></i>
+        </div>
+        <!-- 2nd -->
+        <div class="container2nd">
+            <!-- IMAGEN -->
+            <div class="cont2ndImg">
+                <img src="../Assets/img/gameplay1.png" alt="enemy train-rail">
+            </div>
+            <!-- TEXTO -->
+            <div class="cont2ndTxt">
+                <p>Los jugadores se sumergirán en una experiencia en primera persona, enfrentándose a enemigos y sobreviviendo en un entorno hostil.</p>
+            </div>
+        </div>
+        <!-- 3rd -->
+        <div class="container3rd">
+            <!-- IMAGEN -->
+            <div class="cont3rdImg">
+                <img src="../Assets/img/arg.jpg" alt="Argentine warrior">
+            </div>
+            <!-- TEXTO -->
+            <div class="cont3rdImgTxt">
+                <p>El juego promete ser una carta de amor a Buenos Aires, retratando locaciones icónicas como la Avenida 9 de Julio, la Biblioteca Nacional, la Plaza de Mayo, los bosques de Ezeiza, y mucho más.</p>
+            </div>
+        </div>
+    </section>
+    <!-- BOTTOM SECTION -->
+    <section class="bottomSection bg-black">
+        <div class="bottomGridContainer">
+            <!-- GRILLA DE IMAGENES -->
+            <div class="bottomGridContainer-content">
+                <div>
+                    <img class="imgGrid img1" src="../Assets/img/Characters.jpg" alt="Characters">
+                </div>
+                <div>
+                    <img class="imgGrid img2" src="../Assets/img/fear.png" alt="Fear">
+                </div>
+                <div>
+                    <img class="imgGrid img3" src="../Assets/img/Day.jpg" alt="Day">
+                </div>
+                <div>
+                    <img class="imgGrid img4" src="../Assets/img/Falcon.jpg" alt="Falcon">
+                </div>
+                <div>
+                    <img class="imgGrid img5" src="../Assets/img/Guns.jpg" alt="Guns">
+                </div>
+                <div>
+                    <img class="imgGrid img6" src="../Assets/img/hole.png" alt="Hole">
+                </div>
+                <div>
+                    <img class="imgGrid img7" src="../Assets/img/woods Stalker.png" alt="Woods Stalker">
+                </div>
+                <div>
+                    <img class="imgGrid img8" src="../Assets/img/buenos aires" alt="Buenos Aires">
+                </div>
+                <div>
+                    <img class="imgGrid img9" src="../Assets/img/fire.webp" alt="Fire">
+                </div>
+            </div>
+            <!-- LIGHTBOX -->
+            <div id="lightbox" class="lightbox">
+                <img id="lightboxImagen" src="" alt="galeria">
+                <div>
+                    <button id="cerrarLightbox">Cerrar</button>
+                </div>
+            </div>                
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <footer>
+        <div class="presentation">
+            <div class="footerContainer">
+                <!-- IMAGEN -->
+                <img src="../Assets/img/18.png" alt="18+">
+                <!-- LINKS -->
+                <div class="linqsContainer ">
+                    <div class="links"><a href="#"><p>Soporte</p></a></div>
+                    <div class="links"><a href="#"><p>Suscribirse</p></a></div>
+                    <div class="links"><a href="#"><p>Informacion Legal</p></a></div>
+                    <div class="links"><a href="#"><p>Accesibilidad</p></a></div>
+                </div>
+            </div>
+            <p>ADVERTENCIA: Este juego contiene violencia intensa, escenas de combate gráfico y no es apto para menores de 18 años</p>
+            <!-- LINKS LATERALES -->
+            <div class="linksLatG">
+                <ul>
+                    <li>
+                        <a href="https://www.youtube.com/@ThePathIntoTheAbyss" target="_blank">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </li>
+                    <li>            
+                        <a href="https://www.instagram.com/thepathintotheabyss? utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://x.com/Abyssthegame" target="_blank">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://t.co/AwZ2kayxKx" target="_blank">
+                            <i class="fa-brands fa-discord"></i>
+                        </a>
+                    </li>            
+                </ul>
+            </div>
+        </div>
+        <!-- DEVELOPERS -->
+        <div class="devs">
+            <p>&copy;2024 Todos los derechos reservados.</p>
+            <p>Sitio Web desarrollado por: Sergio Ramos, Bruno Segovia, Santiago Rojas</p>
+            <a href="#">Contactanos</a>
+        </div>
+    </footer>
+    <script>
+        //ABRE IMAGEN EN LIGHTBOX 
+        function abrirLightbox(url) {
+            lightboxImagen.src = url;
+            lightbox.style.display = "block";
+        }
+        //ITERA CADA ELEMENTO .IMGGRID Y LE ASIGNA EVENTO CLICK PARA QUE EJECUTE FUNC ABRIRLIGHTBOX
+        document.querySelectorAll('.imgGrid').forEach(item => {
+            item.addEventListener('click', event => {
+                const url = event.target.src; // RESCATA URL DE LA IMAGEN
+                abrirLightbox(url);
+            });
+        });
+        // EVENTO CERRAR LIGHTBOX PARA BOTON
+        cerrarLightbox.addEventListener("click", function() {
+            lightbox.style.display = "none";
+        });
+        //CERRAR LIGHTBOX CLICKEANDO AFUERA DE LA IMAGEN
+        lightbox.addEventListener("click", function() {
+            lightbox.style.display = "none";
+        });
+        // CERRAR LIGHTBOX CON TECLA "ESC"
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "Escape") {
+                lightbox.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>
