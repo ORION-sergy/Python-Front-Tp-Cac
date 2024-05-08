@@ -101,7 +101,6 @@
         /* LINKS LATERALES */
             .linksLatG{
                 display: flex;
-                position: fixed;
                 top: 0%;
                 bottom: 0%;
                 right: 0%;
@@ -110,6 +109,9 @@
                 z-index: 10;
             }
             .linksLatG ul{
+                display: flex;
+                gap: 4px 16px;
+                margin-top: 20px;
                 margin-right: 16px;
                 list-style: none;
             }
@@ -141,6 +143,38 @@
                 text-decoration: none;
                 transform: scale(1.2);
                 filter: brightness(10);
+            }
+            .links a p:hover {
+                transform: scale(1.1);
+                transition-duration: 0s;
+                filter: brightness(150%);
+            }
+            /* ARROWS DOWN */
+            .arrows-down{
+                position: absolute;
+                z-index: 50;
+                margin-right: 10px;
+                right: 0;
+                top: 45vh;
+                font-size: 20px;
+                color: #ededed;
+                text-rendering: optimizeLegibility;
+                transform: translateY(210%); 
+                text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+                animation: Down 2.2s infinite;
+            }
+            @keyframes Down {
+                0%{
+                    transform: translateY(210%);
+                }
+            
+                50%{
+                    transform: translateY(235%);
+                }
+            
+                100%{
+                    transform: translateY(210%);
+                }
             }
     /* MID SECTION */
         .midSection {
@@ -425,7 +459,7 @@
         }
         .presentation {
             background-color: black;
-            padding: 10vh 20vw;
+            padding: 2vh 20vw;
             border-top: 1px solid transparent;
             border-bottom: 1px solid transparent;
             border-image: linear-gradient(to right, rgba(255, 255, 255, 0), #dfdede, rgba(255, 255, 255, 0)) 2 stretch;
@@ -468,17 +502,17 @@
                     flex-direction: column;
                 }
             }
-        .linqs{
+        .links{
             padding-top: 4px;
         }
             /* query sm: */
             @media (max-width: 640px) {
-                .linqs {
+                .links {
                     padding-bottom: 3px;
                     font-size: 13px;
                 }
             }
-        .linqs a{
+        .links a{
             color: white;
         }
         .presentation p{
