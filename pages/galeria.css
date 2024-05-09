@@ -176,6 +176,12 @@
                     transform: translateY(210%);
                 }
             }
+                /* query lg: */
+                @media (max-width: 1024px) {
+                    .arrows-down {
+                        display: none;
+                    }
+                }
     /* MID SECTION */
         .midSection {
             background-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 20%),
@@ -569,6 +575,7 @@
         .check{
             position: relative;
             width: 50px;
+            background-color: black;
         }
         .check::before{
             content: '';
@@ -591,6 +598,14 @@
             border: 1px solid white;
             box-sizing: border-box;
         }
+            /* query sm: */
+            @media (max-width: 640px) {
+                .check::after {
+                    width: 17px;
+                    margin-top: 2px;
+                    height: 12px;
+                }
+            }
         .check:checked::after{
             left: 30px;
         }
@@ -604,3 +619,12 @@
             z-index: 10;
             right: 0;
         }
+        .lang span{
+            font-size: 17px;
+        }
+            /* query sm: */
+            @media (max-width: 640px) {
+                .lang span {
+                    font-size: 12px;
+                }
+            }
