@@ -176,6 +176,12 @@
                     transform: translateY(210%);
                 }
             }
+                /* query lg: */
+                @media (max-width: 1024px) {
+                    .arrows-down {
+                        display: none;
+                    }
+                }
     /* MID SECTION */
         .midSection {
             background-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 20%),
