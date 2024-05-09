@@ -24,13 +24,15 @@
                 </div>
             </div>
         </nav>
+        <!-- CHECK IDIOMA -->
+        <div class="lang">
+            <span class="en">English</span>
+                <input type="checkbox" class="check" checked>
+            <span class="sp">Spanish</span>
+        </div>
         <!-- VIDEO -->
         <div class="videoG-container">
             <video src="../Assets/img/videoFinal.mp4" muted controls autoplay loop></video>
-        </div>
-        <!-- PRUEBA -->
-        <div>
-            <p>IDK</p>
         </div>
         <!-- ARROW LAT -->
         <div class="arrows-down">
@@ -170,33 +172,6 @@
             <a href="#">Contactanos</a>
         </div>
     </footer>
-    <script>
-        //ABRE IMAGEN EN LIGHTBOX 
-        function abrirLightbox(url) {
-            lightboxImagen.src = url;
-            lightbox.style.display = "block";
-        }
-        //ITERA CADA ELEMENTO .IMGGRID Y LE ASIGNA EVENTO CLICK PARA QUE EJECUTE FUNC ABRIRLIGHTBOX
-        document.querySelectorAll('.imgGrid').forEach(item => {
-            item.addEventListener('click', event => {
-                const url = event.target.src; // RESCATA URL DE LA IMAGEN
-                abrirLightbox(url);
-            });
-        });
-        // EVENTO CERRAR LIGHTBOX PARA BOTON
-        cerrarLightbox.addEventListener("click", function() {
-            lightbox.style.display = "none";
-        });
-        //CERRAR LIGHTBOX CLICKEANDO AFUERA DE LA IMAGEN
-        lightbox.addEventListener("click", function() {
-            lightbox.style.display = "none";
-        });
-        // CERRAR LIGHTBOX CON TECLA "ESC"
-        document.addEventListener("keydown", function(event) {
-            if (event.key === "Escape") {
-                lightbox.style.display = "none";
-            }
-        });
-    </script>
 </body>
+<script src="galeria.js"></script>
 </html>
