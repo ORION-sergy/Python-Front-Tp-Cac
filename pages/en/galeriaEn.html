@@ -32,8 +32,8 @@
         </div>
         <!-- VIDEO -->
         <div class="videoG-container">
-            <!-- <iframe class="" id="video" style="height: 100vh; width: 100vw;" src="https://www.youtube.com/embed/9s-5tR0fGfM?enablejsapi=1&controls=1&modestbranding=1" frameborder="0"></iframe> -->
-            <video src="../../Assets/img/videoFinal.mp4" muted controls autoplay loop></video>
+            
+            <video src="../../Assets/img/videoFinal.mp4" muted controls autoplay loop></video> 
         </div>
         <!-- ARROW LAT -->
         <div class="arrows-down">
@@ -174,5 +174,12 @@
         </div>
     </footer>
     <script src="../galeria.js"></script>
+    <script>
+        document.getElementById('playButton').addEventListener('click', function() {
+    var videoFrame = document.getElementById('video');
+    videoFrame.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+    this.style.display = 'none'; // Ocultar el botón después de hacer clic en él
+});
+    </script>
 </body>
 </html>
