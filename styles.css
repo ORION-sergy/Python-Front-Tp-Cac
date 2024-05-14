@@ -188,7 +188,7 @@ nav{
     flex-direction: column;
     background: url(/Assets/img/Night.jpg);
     background-size: cover;
-    padding: 40vh 5vw 10vh; /* Utilizando porcentajes para el relleno */
+    padding: 20vh 5vw 10vh; /* Utilizando porcentajes para el relleno */
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -198,8 +198,8 @@ nav{
 }
 
 .info-container {
-    margin-bottom: 10%; /* Espacio entre cada sección */
-    max-width: 90%; /* Establecer un ancho máximo para evitar que el texto sea demasiado ancho */
+    width: 75%; 
+    margin-bottom: 20vh;
 }
 
 .info-container h1, .info-container h2 {
@@ -212,15 +212,60 @@ nav{
     font-size: 5vw;
 }
 
-.info-container h2 {
+.info-container p {
+    line-height: 1.6; /* Espaciado de línea aumentado */
+    font-size: 2vw;
+}
+
+#img-and-row{
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+#gif {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0vw 0vh 1vw  rgba(0, 32, 139, 0.575)); /* Utiliza drop-shadow para aplicar el sombreado */
+    padding: 0;
+    margin: 0 0 5vh 0;
+}
+
+#gif img{
+    width: 80vw;
+    height: auto;
+    filter: drop-shadow(0vw 0vh 1vw  rgb(0, 0, 0)); /* Utiliza drop-shadow para aplicar el sombreado */
+}
+
+.row-container{
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start; /*Al estar los elementos puestos en fila, align-items y justify-content invierten sus funciones*/
+    justify-content: center;
+
+    padding: 0;
+    margin: 5vh 2vw;
+
+}
+
+.row-container .info-container h2 {
     font-size: 3vw;
 }
 
-.info-container p {
+.row-container .info-container h2 {
+    font-size: 3vw;
+}
+
+.row-container .info-container p {
+    margin: 0.5vh 2.5vw 0; /* Espacio entre párrafos */
+    font-size: 1.8vw;
     font-style: oblique;
-    margin: 1% 15vw 0; /* Espacio entre párrafos */
-    line-height: 1.6; /* Espaciado de línea aumentado */
-    font-size: 2vw;
+
 }
 
 
@@ -526,6 +571,52 @@ footer{
         padding: 0 5vw;
         margin: 0;
     }
+    
+    #img-and-row{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+    
+    #gif {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        filter: drop-shadow(0vw 0vh 5vw  rgba(0, 32, 139, 0.575)); /* Utiliza drop-shadow para aplicar el sombreado */
+        padding: 0;
+        margin: 0 0 5vh 0;
+    }
+    
+    #gif img{
+        width: 100vw;
+        height: auto;
+        filter: drop-shadow(0vw 0vh 5vw  rgba(255, 255, 255, 0.486)); /* Utiliza drop-shadow para aplicar el sombreado */
+    }
+    
+    .row-container{
+        flex-direction: column;
+        align-items:center; 
+    
+        margin: 0.1vh 0vw;
+    
+    }
+    
+    .row-container .info-container h2 {
+        font-size: xx-large;
+    }
+    
+   
+    
+    .row-container .info-container p {
+        margin: 0.5vh 2.5vw 0; /* Espacio entre párrafos */
+        font-size: 6vw;
+        font-style: oblique;
+    
+    }
+    
 
     footer{
         display: flex;
