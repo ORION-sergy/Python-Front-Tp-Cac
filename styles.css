@@ -645,7 +645,55 @@ footer{
         }
     }
 }
-
+/* CHECKBOX IDIOMA */
+/* INPUT CHECK IDIOMA */
+.lang{
+    float: right;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+}
+.check{
+    position: relative;
+    width: 50px;
+    background-color: black;
+}
+.check::before{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 16px;
+    border-radius: 25px;
+    background-color: black;
+}
+.check::after{
+    content: '';
+    position: absolute;
+    margin-top: .5px;
+    margin-left: 1px;
+    width: 19px;
+    height: 14px;
+    background-color: #fff;
+    border-radius: 25px;
+    transition: 0.25s;
+    border: 1px solid white;
+    box-sizing: border-box;
+}
+.check:checked::after{
+    left: 30px;
+}
+.check:checked::before{
+    
+    background-color:  black;
+}
+.lang{
+    margin-right: 10px;
+    position: fixed;
+    z-index: 10;
+    right: 0;
+}
+.lang span{
+    font-size: 17px;
+}
 
 
 
