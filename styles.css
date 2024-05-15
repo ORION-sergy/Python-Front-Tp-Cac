@@ -64,6 +64,11 @@ nav{
     font-weight: 300; /* Ajusta el grosor de la fuente a 300 (más delgada) o a tu preferencia */
 }
 
+/*Menú desplegable (para mobile)*/
+
+.menu-toggle, #menu-icon{
+    display: none; /* Por defecto, oculta el botón del menú */
+}
 
 
 /*Home Section*/
@@ -269,59 +274,122 @@ nav{
 
 
 
-/*Footer*/
-
+/* FOOTER */
 footer{
-    background: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    background-color: black;
+    color: white;
+}
+.footerPresentation {
+    background-color: black;
+    padding: 2vh 20vw;
     border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
     border-image: linear-gradient(to right, rgba(255, 255, 255, 0), #dfdede, rgba(255, 255, 255, 0)) 2 stretch;
-    filter: brightness(1.5); /* Ajusta el brillo según sea necesario */
-    outline: 1px solid transparent; /* Agrega un contorno adicional */
+    filter: brightness(1.5); 
+    outline: 1px solid transparent;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    font-family: Bebas Neue;
+}
+.footerContainer{
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
+}
+.footerContainer img{
+    max-width: 100px;
+}
+.linqsContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 8px;
+}
+.links{
+    padding-top: 4px;
+}
+.links a{
+    color: white;
 }
 
-.redes{
-    list-style: none; /* Elimina los puntos de la lista */
-    padding: 0; /* Elimina el espacio de relleno predeterminado de la lista */
-    display: flex; /* Hace que los elementos de la lista se muestren en línea */
-    justify-content: center;
+.linksLatG{
+    display: flex;
+    top: 0%;
+    bottom: 0%;
+    right: 0%;
     align-items: center;
-    padding: 20px;
+    justify-content: center;
+    z-index: 10;
+}
+.linksLatG ul{
+    display: flex;
+    gap: 4px 16px;
+    margin-top: 20px;
+    margin-right: 16px;
+    list-style: none;
+}
+.linksLatG ul li{
+    text-align: center;
+    padding: 4px 0;
+}
+.linksLatG li a{
+    text-decoration: none;
+    color: white;
+}
+.linksLatG ul li a i{
+    font-size: 20px;
+}
+a:hover i {
+    color: #ffffff;
+    text-decoration: none;
+    transform: scale(1.2);
+    filter: brightness(10);
+}
+.links a p:hover {
+    transform: scale(1.1);
+    transition-duration: 0s;
+    filter: brightness(150%);
 }
 
-.redes li{
-    margin: 0 15%; /* Añade espacio entre los elementos de la lista */
 
+.footerPresentation p{
+    font-size: 17px;
+    margin-top: 4px;
+    margin-left: 4px;
+}
+/* DEVELOPERS */
+.devs{
+    background-color: black;
+    width: fit-content;
+    padding: 8px 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 10px;
+    text-align: center;
+    color: #DFDED040;
+    font-family: sans-serif !important;
+}
+.devs p{
+    width: fit-content;
+    margin: 0 auto;
+}
+.devs p:hover{
+    color: white;
+}
+.devs a{
+    color: #0000EE;
+    font-weight: bold;
+}
+.devs a:hover{
+    text-decoration: underline;
 }
 
-.redes li a {
-    text-decoration: none; /* Elimina la decoración del texto del enlace */
-}
 
-.redes li a i{
-    transition: transform 0.3s ease, filter 0.3s ease;
-    color: #727272;
-    font-size: 200%;
-}
-
-.redes a:hover i {
-    color: #ffffff; /* Cambia el color del ícono al pasar el ratón por encima */
-    text-decoration: none; /* Elimina el subrayado del ícono al pasar el ratón por encima */
-    transform: scale(1.2); /* Aumenta el tamaño del ícono */
-    filter: brightness(10); /* Aumenta el brillo del ícono */
-}
-
-/*Menú desplegable (para mobile)*/
-
-.menu-toggle, #menu-icon{
-    display: none; /* Por defecto, oculta el botón del menú */
-}
 
 @media screen and (max-width: 1900px) {
-
     /* Ajustes para las imágenes */
     img {
         max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
@@ -616,24 +684,36 @@ footer{
     }
     
 
-    footer{
+    /* LINKS FOOTER CONTAINER */
+    .linqsContainer {
         display: flex;
-        height: 10vh;
-        justify-content: center;
-        align-items: center;
-
+        flex-direction: column;
+        justify-content:stretch;
+        font-size: 15px;
     }
-
-    .redes {
-        justify-content: center;
-        align-items: center;
-        margin: 2vh 0;
+    /* LINKS DIV */
+    .links {
+        padding-bottom: 3px;
+        font-size: 13px;
     }
-
-    .redes li a i{
-        scale: 100%;
+    /* TEXTO DE FOOTER GAME */
+    .presentation p{
+        font-size: 12px;
     }
-    
+    /* DEVELOPERS FONTSIZE */
+    .devs{
+        font-size: 8px;
+    }
+    /* CHECKBOX IDIOMA CHECK::AFTER */
+    .check::after {
+        width: 17px;
+        margin-top: 2px;
+        height: 12px;
+    }
+    /* TEXTO INPUT CHECK IDIOMA */
+    .lang span {
+        font-size: 12px;
+    }    
 }
 
 
