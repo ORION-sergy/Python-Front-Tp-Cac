@@ -241,6 +241,7 @@ nav{
     width: 80vw;
     height: auto;
     filter: drop-shadow(0vw 0vh 1vw  rgb(0, 0, 0)); /* Utiliza drop-shadow para aplicar el sombreado */
+    
 }
 
 .row-container{
@@ -258,11 +259,7 @@ nav{
     font-size: 3vw;
 }
 
-.row-container .info-container h2 {
-    font-size: 3vw;
-}
-
-.row-container .info-container p, .info-container:last-of-type{
+.row-container .info-container p, .info-container p:last-of-type{
     margin: 0.5vh 2.5vw 0; /* Espacio entre párrafos */
     font-size: 1.8vw;
     font-style: oblique;
@@ -323,7 +320,7 @@ footer{
     display: none; /* Por defecto, oculta el botón del menú */
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1900px) {
 
     /* Ajustes para las imágenes */
     img {
@@ -559,13 +556,15 @@ footer{
         padding: 1.1vh 0;
         margin: 0;
         text-align: center;
-        font-size: 350%;
     }
 
-    .info h2{
-        font-size: 200%;
+
+
+    .info-container h1{
+        font-size: 12vw;
     }
 
+    
     .info-container p{
         font-size: x-large;
         font-style: oblique;
@@ -600,18 +599,16 @@ footer{
     .row-container{
         flex-direction: column;
         align-items:center; 
-    
         margin: 0.1vh 0vw;
-    
     }
     
-    .row-container .info-container h2 {
-        font-size: xx-large;
+    .row-container .info-container h2{
+        font-size: 9vw;
     }
     
    
     
-    .row-container .info-container p {
+    .row-container .info-container p, .info-container p:last-of-type {
         margin: 0.5vh 2.5vw 0; /* Espacio entre párrafos */
         font-size: 6vw;
         font-style: oblique;
@@ -715,6 +712,8 @@ footer{
         filter: brightness(1.5); /* Ajusta el brillo según sea necesario */
         outline: 1px solid transparent; /* Agrega un contorno adicional */    
     }
+
+
 }
 
 /*Para pantallas móviles especiales*/
