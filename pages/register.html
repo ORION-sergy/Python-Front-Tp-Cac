@@ -8,6 +8,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
+<!--header-->
+  <header> 
+    <div class="menu-container">
+        <span id="menu-icon" class="menu-toggle fa-solid fa-bars"> </span>
+        <nav class="navbar-menu">
+            <ul id="nav-links">
+                <li><a href="#info" class="smooth-scroll">+Info</a></li>
+                <li><a href="pages/galeria.html" class="smooth-scroll">Galería</a></li>
+                <li><a href="/pages/register.html" class="smooth-scroll">Registrarse</a></li>
+                <li><a href="" class="smooth-scroll">Quiénes somos</a></li>
+                <li><a href="#footer" class="smooth-scroll">Contactanos</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<!-- fin header-->
 
     <!--REGISTRO-->
     <div></div>
@@ -25,13 +41,48 @@
           <label for="exampleInputPassword1">Contraseña</label>
           <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
         </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Fecha de nacimiento </label>
+          <input type="date" class="form-control" id="exampleInputPassword1" placeholder="Birthday">
+        </div>
         <div class="form-check">
           <input type="checkbox" class="form-check-input" id="exampleCheck1">
           <label class="form-check-label" for="exampleCheck1">Quiero recibir novedades</label>
         </div>
+        
         <button type="submit" class="btn btn-primary">Enviar</button>
       </form>
 
+
+      <!--footer-->
+
+      <footer id="footer">
+        <!--Links-->
+        <ul class="redes"> 
+            <li>
+                <a href="https://www.youtube.com/@ThePathIntoTheAbyss">
+                    <i class="fa-brands fa-youtube"></i>
+                </a> <!--Youtube-->
+            </li>
+            <li>            
+                <a href="https://www.instagram.com/thepathintotheabyss? utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                    <i class="fa-brands fa-instagram"></i>
+                </a> <!--Instagram-->
+            </li>
+            <li>
+                <a href="https://x.com/Abyssthegame">
+                    <i class="fa-brands fa-x-twitter"></i>
+                 </a> <!--Twitter-->
+            </li>
+            <li>
+                <a href="https://t.co/AwZ2kayxKx">
+                    <i class="fa-brands fa-discord"></i>
+                </a> <!--Discord-->    
+            </li>            
+        </ul>      
+
+</footer>
+      <!--fin footer-->
 
 
 
