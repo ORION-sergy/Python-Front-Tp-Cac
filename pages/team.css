@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    background-color: black;
+}
+
+header{
+    height: 40%;
+    position: absolute; /* Cambia la posición a absoluta */
+    width: 100%; /* Ajusta el ancho al 100% */
+    top: 0;
+    background: transparent; /* Establece el fondo del header como transparente */
+    z-index: 1; /* Asegura que el header esté en la parte superior */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Menú por defecto*/
+nav{
+    height: 10vh;
+    display: flex;
+    justify-content: center;/*con respecto al eje principal, que es la fila(horizontal)*/
+    align-items: center; /*con respecto al eje secundario, que es la columna(vartical)*/
+    padding: 0 30vw;
+    border-top: 0.5px solid transparent;
+    border-bottom: 0.5px solid transparent;
+    border-image: linear-gradient(to right, rgba(255, 255, 255, 0), #dfdede, rgba(255, 255, 255, 0)) 2 stretch;
+    filter: brightness(1.5); /* Ajusta el brillo según sea necesario */
+    outline: 0.5px solid transparent; /* Agrega un contorno adicional */
+}
+
+.navbar-menu {
+    background: transparent; /* Hace que el fondo del navbar sea transparente */
+}
+
+#nav-links{
+    display: flex;
+    /*Ubicamos los li*/
+    gap: 30px; /*defino el tamano de los huecos entre los items*/
+    list-style: none;
+}
+
+#nav-links li{
+    transition: transform 0.2s ease, filter 0.2s ease; /* Separar la transición para transform y filter */
+    border-bottom: 1px solid transparent;
+
+}
+
+#nav-links li:hover{
+    color: #ffffff; /* Cambia el color del ícono al pasar el ratón por encima */
+    text-decoration: none; /* Elimina el subrayado del ícono al pasar el ratón por encima */
+    transform: scale(1.05); /* Aumenta el tamaño del ícono */
+    filter: brightness(10); /* Aumenta el brillo del ícono */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Agrega un efecto de sombra al texto para que brille */
+    border-image: linear-gradient(to right, rgba(255, 255, 255, 0), #dfdede, rgba(255, 255, 255, 0)) 2 stretch;
+    filter: brightness(1.5); /* Ajusta el brillo según sea necesario */
+    outline: 1px solid transparent; /* Agrega un contorno adicional */
+
+}
+
+#nav-links li a{
+    text-decoration: none;
+    color: rgb(223, 222, 222);
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 130%;
+    font-weight: 300; /* Ajusta el grosor de la fuente a 300 (más delgada) o a tu preferencia */
+}
+
+.home-Title{
+    margin-top: 10vh; /* Ajusta según sea necesario */
+    padding: 5vh 0;
+}
+
+.home-Title a{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    scale: 100%;
+    filter: drop-shadow(10px 10px 20px rgb(0, 0, 0)); /* Utiliza drop-shadow para aplicar el sombreado */
+}
+
+.home-Title a img{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%; /* Ajusta la anchura de la imagen al 100% del contenedor */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    max-width: 100%; /* Evita que la imagen se extienda más allá de su tamaño original */
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.372)); /* Utiliza drop-shadow para aplicar el sombreado */
+    padding: 0;
+    margin: 0;
+}
+
