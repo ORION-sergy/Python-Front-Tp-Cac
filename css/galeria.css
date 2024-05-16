@@ -12,6 +12,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
 ::-webkit-scrollbar {
     display: none; 
 }
@@ -98,7 +102,7 @@
             color: white;
         }
         .linksLatG ul li a i{
-            font-size: 20px;
+            font-size: 29px;
         }
         a:hover i {
             color: #ffffff;
@@ -175,11 +179,12 @@
             padding-bottom: 40px;
             width: 100%;
         }
-        .container1st-container p {
-            max-width: 480px;
-            font-size: 21px;
+        .imgContainer1st p {
+            margin: 0 auto;
+            max-width: 680px;
+            font-size: 29px;
             text-align: center;
-            padding-bottom: 24px;
+            padding: 64px 0;
         }
         .imgContainer1st{
             width: 100%;
@@ -201,7 +206,7 @@
             margin-right: auto;
             width: 80%;
             column-gap: 90px;
-            margin-top: 100px;
+            margin-top: 40px;
         }
         .cont2ndImg{
             padding-bottom: 0%;
@@ -219,7 +224,7 @@
         }
         .cont2ndTxt p{
             max-width: 480px;
-            font-size: 21px;
+            font-size: 29px;
             text-align: center;
         }
     /* 3rd */
@@ -251,7 +256,7 @@
         }
         .cont3rdImgTxt p{
             max-width: 480px;
-            font-size: 21px;
+            font-size: 29px;
             text-align: center;
         }
 /* BOTTOM SECTION */
@@ -360,7 +365,7 @@
         color: white;
     }
     .presentation p{
-        font-size: 17px;
+        font-size: 29px;
         margin-top: 4px;
         margin-left: 4px;
     }
@@ -506,7 +511,7 @@
         }
         /* LINKS LATERALES li ICON */
         .linksLatG ul li a i {
-            font-size: 12px;
+            font-size: 21px;
         }
         /* MID SECTION */
         .midSection {
@@ -526,16 +531,17 @@
             width: 100%;
         }
         /* TEXTO ABAJO DE IMAGEN CARTEL */
-        .container1st-container p {
-            font-size: 11px;
+        .imgContainer1st p {
+            padding: 15px 0;
+            font-size: 21px;
         }
         /* 2ND TEXTO */
         .cont2ndTxt p {
-            font-size: 11px;
+            font-size: 21px;
         }
         /* 3RD TEXTO BAJO IMAGEN */
         .cont3rdImgTxt p {
-            font-size: 11px;
+            font-size: 21px;
         }
         /* BOTTOM SECTION */
         /* GRILLA DE GRID */
@@ -561,11 +567,11 @@
         }
         /* TEXTO DE FOOTER GAME */
         .presentation p{
-            font-size: 12px;
+            font-size: 18px;
         }
         /* DEVELOPERS FONTSIZE */
         .devs{
-            font-size: 8px;
+            font-size: 12px;
         }
         /* CHECKBOX IDIOMA CHECK::AFTER */
         .check::after {
@@ -582,11 +588,13 @@
 
 /*Menú por defecto*/
 nav{
-    height: 10vh;
+    height: 5vh;
+    position: absolute;
     display: flex;
     justify-content: space-between;/*con respecto al eje principal, que es la fila(horizontal)*/
     align-items: center; /*con respecto al eje secundario, que es la columna(vartical)*/
     padding: 0px 20px; /* Ajusta el espacio desde los bordes derecho e izquierdo */
+    z-index: 10;
 }
 /* menu oculto  */
 .menu-toggle, #menu-icon{
@@ -641,7 +649,7 @@ nav{
 
 .menu-container::before {
     content: "";
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -655,27 +663,23 @@ nav{
 }
 
 .menu-container.active::before {
-    opacity: 1; /* Muestra el fondo borroso cuando el menú está activo */
+    opacity: 2; /* Muestra el fondo borroso cuando el menú está activo */
 }
 
 /* Agregar estilo para deshabilitar el scroll cuando el menú está activado */
 body.menu-open {
     overflow: hidden;
 }
-
-
 /* Overlay para el área del menú */
 .menu-toggle {
     display: inline-block;
-    scale: 250%;
     position: absolute;
-    cursor: pointer; /* Cambia el cursor a un puntero al pasar el ratón por encima */
     text-decoration: none;
-    margin: 10vh 0 0 0;
-    padding: 20% 100%;
+    margin: 1vh 0 0 0;
+    padding: 20% 10%;
     color: #dfdede;
-    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease; /* Agrega la propiedad box-shadow a la transición*/
-    z-index: 1000; /* Asegura que el icono del menú esté en una capa superior */
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+    z-index: 10000;
 }
 
 .menu-toggle:hover {
@@ -690,7 +694,7 @@ body.menu-open {
 
 .navbar-menu {
     display: none; /* Por defecto, oculta el menú en dispositivos móviles */
-    position: fixed;
+    position: absolute;
     z-index: 1000; /* Asegura que el menú esté en una capa superior */
     top: 12%;
     left: 20px; /* Ajuste para que el menú esté pegado al borde izquierdo */
@@ -709,6 +713,9 @@ body.menu-open {
     opacity: 1; /* Hace que el menú sea visible al activar la clase 'active' */
     padding: 0;
     margin: 0;
+    left: 15px;
+    width: fit-content;
+    z-index: 5000;
 }
 
 
@@ -759,9 +766,11 @@ body.menu-open {
         transform: translateX(0);
     }
 }
-
+#nav-links{
+    margin-top: 35px;
+}
 #nav-links li a{
-    font-size: 200%;
+    font-size: 130%;
 }
 }
 
@@ -769,6 +778,6 @@ body.menu-open {
 @media screen and (min-width: 2000px) {
 
     #nav-links li a{
-        font-size: 200%;
+        font-size: 80%;
     }
 }
