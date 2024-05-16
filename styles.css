@@ -277,7 +277,7 @@ footer{
     display: none; /* Por defecto, oculta el botón del menú */
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1900px) {
 
     /* Ajustes para las imágenes */
     img {
