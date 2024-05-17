@@ -4,10 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REGISTRATE</title>
-    <link rel="stylesheet" href="/pages/regiser.css">
+    <link rel="stylesheet" href="/css/regiser.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
+
+  <header>
+    <div class="menu-container">
+        <span id="menu-icon" class="menu-toggle fa-solid fa-bars"> </span>
+        <nav class="navbar-menu">
+            <ul id="nav-links">
+                <li><a href="#info" class="smooth-scroll">+Info</a></li>
+                <li><a href="pages/galeria.html" class="smooth-scroll">Galería</a></li>
+                <li><a href="/pages/register.html" class="smooth-scroll">Registrarse</a></li>
+                <li><a href="" class="smooth-scroll">Quiénes somos</a></li>
+                <li><a href="#footer" class="smooth-scroll">Contactanos</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
 
     <!--REGISTRO-->
     <div></div>
@@ -16,14 +32,17 @@
     <form class="Formu">
         <div class="form-group">
           <label for="exampleInputEmail1">Email</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Usuario</label>
-            <input class="form-control" id="exampleInputPassword1" placeholder="Usuario">
+            <input class="form-control" id="exampleInputPassword1" placeholder="Usuario" required>
         <div class="form-group">
           <label for="exampleInputPassword1">Contraseña</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+        </div> <div class="form-group">
+          <label for="exampleInputPassword1">Fecha de nacimiento</label>
+          <input type="date" class="form-control" id="exampleInputPassword1" placeholder="birthday" required>
         </div>
         <div class="form-check">
           <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -38,11 +57,65 @@
 
 
 
-
-
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
+
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="presentation">
+          <div class="footerContainer">
+              <!-- IMAGEN -->
+              <img src="../Assets/img/18.png" alt="18+">
+              <!-- LINKS -->
+              <div class="linqsContainer ">
+                  <div class="links"><a href="#"><p>Soporte</p></a></div>
+                  <div class="links"><a href="#"><p>Suscribirse</p></a></div>
+                  <div class="links"><a href="#"><p>Informacion Legal</p></a></div>
+                  <div class="links"><a href="#"><p>Accesibilidad</p></a></div>
+              </div>
+          </div>
+          <p>ADVERTENCIA: Este juego contiene violencia intensa, escenas de combate gráfico y no es apto para menores de 18 años</p>
+          <!-- LINKS LATERALES -->
+          <div class="linksLatG">
+              <ul>
+                  <li>
+                      <a href="https://www.youtube.com/@ThePathIntoTheAbyss" target="_blank">
+                          <i class="fa-brands fa-youtube"></i>
+                      </a>
+                  </li>
+                  <li>            
+                      <a href="https://www.instagram.com/thepathintotheabyss?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                          <i class="fa-brands fa-instagram"></i>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://x.com/Abyssthegame" target="_blank">
+                          <i class="fa-brands fa-x-twitter"></i>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://t.co/AwZ2kayxKx" target="_blank">
+                          <i class="fa-brands fa-discord"></i>
+                      </a>
+                  </li>            
+              </ul>
+          </div>
+      </div>
+      <!-- DEVELOPERS -->
+      <div class="devs">
+          <p>&copy;2024 Todos los derechos reservados.</p>
+          <p>Sitio Web desarrollado por: Sergio Ramos, Bruno Segovia, Santiago Rojas</p>
+          <a href="#">Contactanos</a>
+      </div>
+  </footer>
+</body>
+<script src="../js/galeria.js"></script>
+
+
+
+
+
+
+
 </html>

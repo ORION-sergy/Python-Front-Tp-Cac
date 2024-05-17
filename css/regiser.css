@@ -1,20 +1,322 @@
 body{
-background-image: url(../sources/guns.jpg) ;  
+background-image: url(/Assets/img/galeriaMidSection.jpg);  
+}
+
+nav{
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;/*con respecto al eje principal, que es la fila(horizontal)*/
+    align-items: center; /*con respecto al eje secundario, que es la columna(vartical)*/
+    padding: 0px 20px; /* Ajusta el espacio desde los bordes derecho e izquierdo */
+}
+
+.navbar-menu {
+    background: transparent; /* Hace que el fondo del navbar sea transparente */
+}
+
+#nav-links{
+    display: flex;
+    /*Ubicamos los li*/
+    gap: 30px; /*defino el tamano de los huecos entre los items*/
+    list-style: none;
+}
+
+#nav-links li{
+    transition: transform 0.2s ease, filter 0.2s ease; /* Separar la transición para transform y filter */
+    border-bottom: 1px solid transparent;
+
+}
+
+#nav-links li:hover{
+    color: #ffffff; /* Cambia el color del ícono al pasar el ratón por encima */
+    text-decoration: none; /* Elimina el subrayado del ícono al pasar el ratón por encima */
+    transform: scale(1.05); /* Aumenta el tamaño del ícono */
+    filter: brightness(10); /* Aumenta el brillo del ícono */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Agrega un efecto de sombra al texto para que brille */
+    border-image: linear-gradient(to right, rgba(255, 255, 255, 0), #dfdede, rgba(255, 255, 255, 0)) 2 stretch;
+    filter: brightness(1.5); /* Ajusta el brillo según sea necesario */
+    outline: 1px solid transparent; /* Agrega un contorno adicional */
+
+}
+
+#nav-links li a{
+    text-decoration: none;
+    color: rgb(223, 222, 222);
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 130%;
+    font-weight: 300; /* Ajusta el grosor de la fuente a 300 (más delgada) o a tu preferencia */
 }
 
 
-.Formu{
 
+
+.Formu {
+    width: 50%;
+    margin: 0 auto;
     color: white;
-    font-size: 20px;
-    
-    padding: 150px;
-    margin: 50px;
-    align-content: center;
-
 }
 
 .title{
     align-items: center;
     color: white;
+}
+
+/* FOOTER */
+footer{
+    background-color: black;
+    color: white;
+}
+.presentation {
+    background-color: black;
+    padding: 2vh 20vw;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(to right, rgba(255, 255, 255, 0), #dfdede, rgba(255, 255, 255, 0)) 2 stretch;
+    filter: brightness(1.5); 
+    outline: 1px solid transparent;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    font-family: Bebas Neue;
+}
+.footerContainer{
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
+}
+.footerContainer img{
+    max-width: 100px;
+}
+.linqsContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 8px;
+}
+.links{
+    padding-top: 4px;
+}
+.links a{
+    color: white;
+}
+.presentation p{
+    font-size: 17px;
+    margin-top: 4px;
+    margin-left: 4px;
+}
+/* DEVELOPERS */
+.devs{
+    background-color: black;
+    width: fit-content;
+    padding: 8px 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 10px;
+    text-align: center;
+    color: #DFDED040;
+    font-family: sans-serif !important;
+}
+.devs p{
+    width: fit-content;
+    margin: 0 auto;
+}
+.devs p:hover{
+    color: white;
+}
+.devs a{
+    color: #0000EE;
+    font-weight: bold;
+}
+.devs a:hover{
+    text-decoration: underline;
+}
+/* INPUT CHECK IDIOMA */
+.lang{
+    float: right;
+}
+.check{
+    position: relative;
+    width: 50px;
+    background-color: black;
+}
+.check::before{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 16px;
+    border-radius: 25px;
+    background-color: black;
+}
+.check::after{
+    content: '';
+    position: absolute;
+    margin-top: .5px;
+    margin-left: 1px;
+    width: 19px;
+    height: 14px;
+    background-color: #fff;
+    border-radius: 25px;
+    transition: 0.25s;
+    border: 1px solid white;
+    box-sizing: border-box;
+}
+.check:checked::after{
+    left: 30px;
+}
+.check:checked::before{
+    
+    background-color:  black;
+}
+.lang{
+    margin-right: 10px;
+    position: fixed;
+    z-index: 10;
+    right: 0;
+}
+.lang span{
+    font-size: 17px;
+}
+/* LARGE: 1024px */
+@media (max-width: 1024px) {
+    /* VIDEO */
+    .videoG-container video {
+        height: auto;
+        width: 100%;
+    }
+    /* ARROWS DOWN */
+    .arrows-down {
+        display: none;
+    }
+}
+/* MEDIUM: max-width:  768*/
+@media (max-width: 768px) {
+    /* SEPARADOR */
+    .sep {
+        display: block;
+        text-align: center;
+    }
+    /* MID SECTION CONTENEDOR 2ND */
+    .container2nd {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 10px;
+        margin-top: 10px;
+    }
+    /* CONTENEDOR DE IMAGEN */
+    .cont2ndImg {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    /* 3RD CONTAINER */
+    .container3rd {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    /* 3RD CONTENEDOR DE IMAGEN */
+    .cont3rdImg {
+        order: -1;
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    /* CONTENEDOR DE LINKS FOOTER */
+    .linqsContainer {
+        display: flex;
+        flex-direction: column;
+    }
+}
+/* SMALL max-width: 640px */
+@media (max-width: 640px) {
+    /* NAV ICON */
+    .navG-content i {
+        font-size: 12px;
+        margin-top: -1.6px;
+    }
+    /* NAV HOME */
+    .navG-content a p {
+        font-size: 12px;
+    }
+    /* NAV GALLERY */
+    .navG-content p {
+        font-size: 12px;
+    }
+    /* LINKS LATERALES li */
+    .linksLatG ul li {
+        padding: 0px 0;
+    }
+    /* LINKS LATERALES li ICON */
+    .linksLatG ul li a i {
+        font-size: 12px;
+    }
+    /* MID SECTION */
+    .midSection {
+        padding-bottom: 20px;
+    }
+    /* 1ST CONTAINER */
+    .container1st{
+        padding-top: 40px;
+    }
+    /* CONTENEDOR DE IMAGEN CARTEL */
+    .imgCartelContainer {
+        max-width: 150px;
+    }
+    /* IMAGEN TRIPODE OBELISCO*/
+    .container1st-container div img {
+        padding-bottom: 20px;
+        width: 100%;
+    }
+    /* TEXTO ABAJO DE IMAGEN CARTEL */
+    .container1st-container p {
+        font-size: 11px;
+    }
+    /* 2ND TEXTO */
+    .cont2ndTxt p {
+        font-size: 11px;
+    }
+    /* 3RD TEXTO BAJO IMAGEN */
+    .cont3rdImgTxt p {
+        font-size: 11px;
+    }
+    /* BOTTOM SECTION */
+    /* GRILLA DE GRID */
+    .bottomGridContainer-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    /* LIGHTBOX IMG */
+    .lightbox img{
+        margin-top: 20%;
+    }
+    /* LINKS FOOTER CONTAINER */
+    .linqsContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content:stretch;
+        font-size: 15px;
+    }
+    /* LINKS DIV */
+    .links {
+        padding-bottom: 3px;
+        font-size: 13px;
+    }
+    /* TEXTO DE FOOTER GAME */
+    .presentation p{
+        font-size: 12px;
+    }
+    /* DEVELOPERS FONTSIZE */
+    .devs{
+        font-size: 8px;
+    }
+    /* CHECKBOX IDIOMA CHECK::AFTER */
+    .check::after {
+        width: 17px;
+        margin-top: 2px;
+        height: 12px;
+    }
+    /* TEXTO INPUT CHECK IDIOMA */
+    .lang span {
+        font-size: 12px;
+    }
 }
