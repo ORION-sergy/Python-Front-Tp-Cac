@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--JavaScript-->
-    <script src="../../script.js"></script>
+    <script src="/script.js"></script>
     <!--Íconos de fontawesome-->
     <script src="https://kit.fontawesome.com/3f5fbf0a8f.js" crossorigin="anonymous"></script>
     <!--CSS-->
-    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="/styles.css">
     <!--favicon-->
     <link class="favicon" rel="shortcut icon" href="/Assets/img/logo/tentacle-strike_38802.png" type="image/x-icon" sizes="64x64">
     <!--Fuentes de Google-->
@@ -25,10 +25,9 @@
             <nav class="navbar-menu">
                 <ul id="nav-links">
                     <li><a href="#info" class="smooth-scroll">+Info</a></li>
-                    <li><a href="galeriaEn.html" class="smooth-scroll">Gallery</a></li>
-                    <li><a href="/pages/register.html" class="smooth-scroll">Sign up</a></li>
-                    <li><a href="" class="smooth-scroll">About us</a></li>
-                    <li><a href="#footer" class="smooth-scroll">Contact us</a></li>
+                    <li><a href="/pages/en/galeriaEn.html" class="smooth-scroll">Gallery</a></li>
+                    <li><a href="/pages/register.html" class="smooth-scroll">Register</a></li>
+                    <li><a href="/pages/en/teamEn.html" class="smooth-scroll">Team</a></li>
                 </ul>
             </nav>
         </div>
@@ -46,7 +45,7 @@
 
             <!--Home Title-->
             <div class="home-Title">
-                <a href="index.html"><img src="../../Assets/img/The-abbys-3-removebg.png" alt=""></a>
+                <a href="/pages/en/indexEn.html"><img src="/Assets/img/The-abbys-3-removebg.png" alt=""></a>
             </div>
     
             <div class="in-dev-container">
@@ -66,54 +65,93 @@
         <section class="info" id="info">
             <div class="info-container">
                 <h1>What is the abyss?</h1>
-                <p>"The abyss" is the City of Buenos Aires, so called because it is ground zero, where the first arrival of the invaders that we will have to face in the game takes place.</p>
+                <p>"The abyss" is the City of Buenos Aires, so called because it is ground zero, a city in ruins transformed by invaders of unknown origin that you must face.</p>
             </div>
         
-            <div class="info-container">
-                <h2>dynamic NPCs</h2>
-                <p>You will find characters in and around the abyss, each with a story to tell. You can make them your travel companions, turn them into your allies or even your enemies.</p>
-            </div>
-        
-            <div class="info-container">
-                <h2>Ambientación</h2>
-                <p>You will be able to explore the city of Buenos Aires, the forests of Ezeiza and its surroundings, each with its own ecosystem affected by the abyss.</p>
-            </div>
-        
-            <div class="info-container">
-                <h2>Difficulty</h2>
-                <p>The game aims for extreme difficulty and there is no map, so you will have to trust your instincts and navigate carefully.</p>
-            </div>
+            <div id="img-and-row">
+                <div id="gif">
+                    <video autoplay loop muted preload="auto" alt="Trailer footage">
+                        <source src="/Assets/img/theAbyssGIF.mp4" type="video/mp4">
+                        <source src="/Assets/img/theAbyssGIF.mp4" type="video/ogg">
+                        <source src="/Assets/img/theAbyssGIF.mp4" type="video/webm">
 
+                    </video>
+                </div>
+                <div class="row-container">
+                    <div class="info-container">
+                        <h2>Open World</h2>
+                        <p>This is a game where you will can move freely around the world and chart your own adventure. You will be able to explore cities, neighborhoods, routes, forests and the Argentine countryside, each place with its own ecosystem.</p>
+                    </div>
+                    
+                    <div class="info-container">
+                        <h2>Difficulty</h2>
+                        <p>The game aims for extreme difficulty and there is no map, so you will have to trust your instincts and navigate carefully. </p>
+                    </div>
 
+                    <div class="info-container">
+                        <h2>Dynamic NPC's</h2>
+                        <p>You'll find NPC's in The Abyss and it's surroundings, each one with a story to tell. You can make a travel companion out of them, turn into alies or even enemies.
+                            <br>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="info-container">
+                    <p>We hope you enjoy it!</p>
+                </div>
+            </div>
         </section>
         
         
     </main>
-    <footer id="footer">
-                    <!--Links-->
-                    <ul class="redes"> 
-                        <li>
-                            <a href="https://www.youtube.com/@ThePathIntoTheAbyss">
-                                <i class="fa-brands fa-youtube"></i>
-                            </a> <!--Youtube-->
-                        </li>
-                        <li>            
-                            <a href="https://www.instagram.com/thepathintotheabyss? utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a> <!--Instagram-->
-                        </li>
-                        <li>
-                            <a href="https://x.com/Abyssthegame">
-                                <i class="fa-brands fa-x-twitter"></i>
-                             </a> <!--Twitter-->
-                        </li>
-                        <li>
-                            <a href="https://t.co/AwZ2kayxKx">
-                                <i class="fa-brands fa-discord"></i>
-                            </a> <!--Discord-->    
-                        </li>            
-                    </ul>      
-        
+    <!-- FOOTER -->
+    <footer>
+        <div class="footerPresentation">
+            <div class="footerContainer">
+                <!-- IMAGEN -->
+                <img src="/Assets/img/18.png" alt="18+">
+                <!-- LINKS -->
+                <div class="linqsContainer ">
+                    <div class="links"><a href="#"><p>Support</p></a></div>
+                    <div class="links"><a href="#"><p>Suscribe</p></a></div>
+                    <div class="links"><a href="#"><p>Legal Information</p></a></div>
+                    <div class="links"><a href="#"><p>Accessibility</p></a></div>
+                </div>
+            </div>
+            <p>ADVERTISE: This game contains intense violence, graphic combat scenes and it's not apt for persons under 18 years old.</p>
+            <!-- LINKS LATERALES -->
+            <div class="linksLatG">
+                <ul>
+                    <li>
+                        <a href="https://www.youtube.com/@ThePathIntoTheAbyss" target="_blank">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </li>
+                    <li>            
+                        <a href="https://www.instagram.com/thepathintotheabyss?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://x.com/Abyssthegame" target="_blank">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://t.co/AwZ2kayxKx" target="_blank">
+                            <i class="fa-brands fa-discord"></i>
+                        </a>
+                    </li>            
+                </ul>
+            </div>
+        </div>
+        <!-- DEVELOPERS -->
+        <div class="devs">
+            <p>&copy;2024 All rights reserved.</p>
+            <p>Website developed by: Sergio Ramos, Bruno Segovia, Santiago Rojas</p>
+            <a href="#">Concact Us</a>
+        </div>
     </footer>
+      
 </body>
 </html>
