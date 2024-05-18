@@ -38,7 +38,9 @@ document.addEventListener('DOMContentLoaded',function(){
             location.href = "en/galeriaEn.html";
         }
     }
-    /* MENU RESP */
+
+    /* MENU */
+    
     const body = document.body;
     const menuToggle = document.querySelector('.menu-toggle');
     const navbarMenu = document.querySelector('.navbar-menu');
