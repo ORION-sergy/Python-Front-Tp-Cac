@@ -6,9 +6,24 @@
 
 html, body{
     height: 100%;
+    background: 
+        url(../Assets/img/campFire-bordes.png) no-repeat;
     background-color: black;
+    background-size: contain;
+
+ 
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+
+
+
+/*HEADER*/
 header{
     height: 10%;
     position: absolute; /* Cambia la posición a absoluta */
@@ -71,31 +86,19 @@ nav{
 }
 
 
-/*Home Section*/
-
-#home{
-    height: 100vh;
+/*MAIN*/
+main{
     width: 100%;
+    flex: 1; /* Hace que el main ocupe el espacio disponible entre el header y el footer */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    padding: 0 0 5% 0; 
-    position: relative; /* Cambia la posición a relativa */
-    z-index: 0; /* Ajusta el índice z para que la sección #home esté detrás del header */
-
-
-    background-image: url(Assets/img/Background.jpg);
-    background-size: auto 150%; /* Ajusta el tamaño de la imagen de fondo al 130% del tamaño del contenedor */
-    background-position: center top; /* Centra la imagen de fondo horizontalmente y la coloca en la parte inferior del contenedor */
-    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
-    padding-bottom: 100px;
+    justify-content: flex-start;
+    align-items: center;  
 }
 
 .home-Title{
-    margin-top: 30vh; /* Ajusta según sea necesario */
-    padding: 10vh 0;
+    padding: 15vh 0 10vh 0;
+
 }
 
 .home-Title a{
@@ -103,19 +106,19 @@ nav{
     margin: 0;
     padding: 0;
     scale: 100%;
-    filter: drop-shadow(10px 10px 20px rgb(0, 0, 0)); /* Utiliza drop-shadow para aplicar el sombreado */
-
+    filter: drop-shadow(10px 10px 20px rgba(145, 145, 145, 0.248)); /* Utiliza drop-shadow para aplicar el sombreado */
 }
 
 .home-Title a img{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     text-align: center;
     width: 100%; /* Ajusta la anchura de la imagen al 100% del contenedor */
     height: auto; /* Mantiene la proporción original de la imagen */
     max-width: 100%; /* Evita que la imagen se extienda más allá de su tamaño original */
-    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.372)); /* Utiliza drop-shadow para aplicar el sombreado */
+    filter: drop-shadow(5px 5px 10px rgba(255, 255, 255, 0.372)); /* Utiliza drop-shadow para aplicar el sombreado */
     padding: 0;
+    padding-bottom: 4vh;
     margin: 0;
 }
 
@@ -125,166 +128,122 @@ nav{
 
 }
 
-.in-dev-container{
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Agrega un efecto de sombra al texto para que brille */
+
+.quienes-somos-container{
+    text-shadow: 0 0 5px rgba(72, 72, 72, 0.5); /* Agrega un efecto de sombra al texto para que brille */
     filter: drop-shadow( 0px 1px 3px  rgb(0, 0, 0)); /* Utiliza drop-shadow para aplicar el sombreado */
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(to right, rgba(255, 255, 255, 0), #dfdede, rgba(255, 255, 255, 0)) 2 stretch;
+    filter: brightness(1.5); 
+    outline: 1px solid transparent;
+    padding-top: 2.5vh; /*Se ve un poco más pegado al texto el borde superior, así que lo subí*/
+    padding-bottom: 1.8vh;
+    margin: 0;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
 
 }
 
-.in-dev{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.quienes-somos{
+    font-family: "Bebas Neue", sans-serif;
     font-size: 280%;
     font-weight: 10;
-    font-style: italic;
-    color: #ededed;
+    color: #e1e1e1;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Agrega un efecto de sombra al texto para que brille */
     filter: drop-shadow(10px 10px 20px rgb(0, 0, 0)); /* Utiliza drop-shadow para aplicar el sombreado */
     text-rendering: optimizeLegibility; /* Hace que el texto se vea más suave y legible */
 }
 
-.arrows-down{
-    font-size: 2vw;
-    color: #ededed;
-    text-rendering: optimizeLegibility; /* Hace que el texto se vea más suave y legible */
-    bottom: 0; /* Alinea el contenedor en la parte inferior */
-    transform: translateY(210%); 
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Agrega un efecto de sombra al texto para que brille */
-    animation: Down 2.2s infinite;
-}
-
-@keyframes Down {
-    0%{
-        transform: translateY(210%);
-    }
-
-    50%{
-        transform: translateY(235%);
-    }
-
-    100%{
-        transform: translateY(210%);
-    }
-}
-
-.presentation {
-    background-color: black;
-    padding: 10vh 20vw;
-    border-top: 1px solid transparent;
-    border-bottom: 1px solid transparent;
-    border-image: linear-gradient(to right, rgba(255, 255, 255, 0), #dfdede, rgba(255, 255, 255, 0)) 2 stretch;
-    filter: brightness(1.5); /* Ajusta el brillo según sea necesario */
-    outline: 1px solid transparent; /* Agrega un contorno adicional */
-}
-
-.presentation h3{
-    color: #dfdede;
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 200%;
-    font-weight: 200;
-    font-style: italic;
-    text-rendering: optimizeLegibility; /* Hace que el texto se vea más suave y legible */
-    text-align: center;
-    transition: transform 3s ease, filter 0.3s ease;
-}
-
-.presentation h3:hover{
-    transform: scale(1.05); /* Aumenta el tamaño del ícono */
-    filter: brightness(10); /* Aumenta el brillo del ícono */
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.687); /* Agrega un efecto de sombra al texto para que brille */
-
-}
-
 .info {
     display: flex;
     flex-direction: column;
-    background: url(/Assets/img/Night.jpg);
-    background-size: cover;
-    padding: 20vh 5vw 10vh; /* Utilizando porcentajes para el relleno */
-    justify-content: center;
+    padding: 10vh 10vw 0 10vw; /* Utilizando porcentajes para el relleno */
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
     margin: 0;
     color: #bababa;
-    font-family: "Bebas Neue", sans-serif;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Agrega un efecto de sombra al texto para que brille */
+    filter: drop-shadow(10px 10px 20px rgb(0, 0, 0)); /* Utiliza drop-shadow para aplicar el sombreado */
+    text-rendering: optimizeLegibility; /* Hace que el texto se vea más suave y legible */
 }
 
-.info-container {
-    width: 75%; 
-    margin-bottom: 20vh;
-}
 
-.info-container h1, .info-container h2 {
-    padding: 0;
-    margin: 0;
-    color: #dfdede; /* Color de título personalizado */
-}
-
-.info-container h1 {
-    font-size: 5vw;
-}
-
-.info-container p {
-    line-height: 1.6; /* Espaciado de línea aumentado */
-    font-size: 2vw;
-}
-
-#img-and-row{
-    height: 70%;
+#cuadricula{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
     padding: 0;
     margin: 0;
-}
-
-#gif {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    filter: drop-shadow(0vw 0vh 1vw  rgba(0, 32, 139, 0.575)); /* Utiliza drop-shadow para aplicar el sombreado */
-    padding: 0;
-    margin: 0 0 5vh 0;
-}
-
-#gif video{
-    
-    width: 80vw;
-    height: auto;
-    filter: drop-shadow(0vw 0vh 1vw  rgb(0, 0, 0)); /* Utiliza drop-shadow para aplicar el sombreado */
-    
 }
 
 .row-container{
     display: flex;
     flex-direction: row;
-    align-items:flex-start; /*Al estar los elementos puestos en fila, align-items y justify-content invierten sus funciones*/
-    justify-content: center;
+    align-items: flex-start; /*Al estar los elementos puestos en fila, align-items y justify-content invierten sus funciones*/
+    justify-content: flex-start;
 
     padding: 0;
-    margin: 5vh 2vw;
+    margin: 1vh 2vw;
 
 }
 
-.row-container .info-container h2 {
-    font-size: 3vw;
+.row-container:last-of-type{
+    margin-bottom: 30vh;
 }
 
-.row-container .info-container p, .info-container p:last-of-type{
-    margin: 0.5vh 2.5vw 0; /* Espacio entre párrafos */
-    font-size: 1.8vw;
-    font-style: oblique;
+.info-container {
+    width: 75%; 
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    margin: 2vw;
+}
 
+.img img{
+    height: 250px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
+.info-container h2 {
+    padding: 0;
+    margin: 1vh 0;
+    color: #dfdede; /* Color de título personalizado */
+    font-family: 'Oswald';
+    font-size: 20pt;
+    font-weight: 500;
+    line-height: 1.2;
+}
 
+.info-container h3{
+    font-family: "Oswald";
+    font-size: 15pt;
+    font-weight: 100;
+    line-height: 1.2;
+}
+
+.img img:hover, .info-container h2:hover, .info-container h3:hover{
+    transform: scale(1.04); /* Aumenta el tamaño del ícono */
+    filter: brightness(1.5); /* Aumenta el brillo del ícono */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Agrega un efecto de sombra al texto para que brille */
+    border-image: linear-gradient(to right, rgba(255, 255, 255, 0), #dfdede, rgba(255, 255, 255, 0)) 2 stretch;
+}
 
 /* FOOTER */
 footer{
     background-color: black;
     color: white;
 }
+
 .footerPresentation {
     background-color: black;
     padding: 2vh 20vw;
@@ -392,25 +351,12 @@ a:hover i {
 .devs a:hover{
     text-decoration: underline;
 }
+    
 
-
-
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 900px) {
 
     *, *::before, *::after {
         max-width: 100vw; /*Con esto evitamos que se desborde el contenido*/
-    }
-
-    /* Ajustes para las imágenes */
-    img {
-        max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
-        max-height: 90vh; /* Ajusta la altura automáticamente */
-    }
-
-    /* Ajustes para los backgrounds */
-    body {
-        background-size: cover; /* Ajusta el tamaño del fondo para cubrir completamente el contenedor */
-        background-position: center; /* Centra el fondo */
     }
 
     .menu-container {
@@ -546,155 +492,95 @@ a:hover i {
         font-size: 200%;
     }
 
-    #home{
-        background-image: none;
-        background-image: url(/Assets/img/Movie\ Poster.jpg);
-        background-size: cover;
+
+    .row-container:last-of-type{
+        margin-bottom: 10vh;
     }
 
-    .home-Title, .home-Title a, .home-Title img{
+
+    main{
+        width: 100%;
+        display: flex;
         justify-content: center;
         align-items: center;
-        display: flex;
-        padding: 0 0 10vh 0;
-        margin-top: 12vh;
+        padding-top: 11vh;
     }
 
     .home-Title a{
-        scale: 95%;    
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .home-Title a img{
-        filter: drop-shadow(10px 10px 20px rgb(0, 0, 0)); /* Utiliza drop-shadow para aplicar el sombreado */
-
+        width: 80%; /* Ajusta la anchura de la imagen al 100% del contenedor */
+        padding-bottom: 0;
     }
 
-    .in-dev-container{
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-        position: inherit;
-        filter: drop-shadow(10px 10px 20px rgb(0, 0, 0)); /* Utiliza drop-shadow para aplicar el sombreado */
-
+    .quienes-somos-container{
+        width: 75%;
     }
-
-    .in-dev{
-        justify-content: center;
-        text-align: center;
-        display: flex;
-        position: inherit;
-        font-size: 9vw;
-        filter: drop-shadow(10px 10px 20px rgb(0, 0, 0)); /* Utiliza drop-shadow para aplicar el sombreado */
-
-    }
-
-    .arrows-down{
-        font-size: 300%;
-        padding: 0;
-        margin: 0;
-        transform: translateY(300%); 
-    }
-
-    @keyframes Down {
-        0%{
-            transform: translateY(300%);
-        }
-
-        50%{
-            transform: translateY(320%);
-        }
-
-        100%{
-            transform: translateY(300%);
-        }
-    }
-
     
-    .presentation {
-        padding: 50vh 5vw;
-    }
-
-    .presentation h3{
+    .quienes-somos{
+        font-family: "Bebas Neue", sans-serif;
         font-size: 200%;
-        font-weight: 100;
+        font-weight: 10;
+        color: #e1e1e1;
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Agrega un efecto de sombra al texto para que brille */
+        filter: drop-shadow(10px 10px 20px rgb(0, 0, 0)); /* Utiliza drop-shadow para aplicar el sombreado */
+        text-rendering: optimizeLegibility; /* Hace que el texto se vea más suave y legible */
     }
 
-    .info{
-        padding: 10vh 0;
-        justify-content: center;
-        text-align: center;
+    .info {
+        padding: 10vh 15vw; 
     }
 
-    .info-container{
-        padding: 0;
-        margin: 10% 0;
-    }
-
-    .info-container h1, .info-container h2{
-        padding: 1.1vh 0;
-        margin: 0;
-        text-align: center;
-    }
-
-
-
-    .info-container h1{
-        font-size: 12vw;
-    }
-
-    
-    .info-container p{
-        font-size: x-large;
-        font-style: oblique;
-        padding: 0 5vw;
-        margin: 0;
-    }
-    
-    #img-and-row{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 0;
-        margin: 0;
-    }
-    
-    #gif {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        filter: drop-shadow(0vw 0vh 5vw  rgba(0, 32, 139, 0.575)); /* Utiliza drop-shadow para aplicar el sombreado */
-        padding: 0;
-        margin: 0 0 5vh 0;
-    }
-    
-    #gif video{
-        width: 100vw;
-        height: auto;
-        filter: drop-shadow(0vw 0vh 5vw  rgba(255, 255, 255, 0.486)); /* Utiliza drop-shadow para aplicar el sombreado */
-    }
-    
     .row-container{
-        flex-direction: column;
-        align-items:center; 
-        margin: 0.1vh 0vw;
-    }
+        display: flex;
+        flex-direction: row;
+        align-items: center; /*Al estar los elementos puestos en fila, align-items y justify-content invierten sus funciones*/
+        justify-content: center;
     
-    .row-container .info-container h2{
-        font-size: 9vw;
-    }
-    
-   
-    
-    .row-container .info-container p, .info-container p:last-of-type {
-        margin: 0.5vh 2.5vw 0; /* Espacio entre párrafos */
-        font-size: 6vw;
-        font-style: oblique;
+        padding: 0;
+        margin: 1vh 2vw;
     
     }
     
+    .row-container:last-of-type{
+        margin-bottom: 5vh;
+    }
+    
+    .info-container {
+        width: 75%; 
+        justify-content: center;
+        align-items: center;
+        text-align:start;
+        margin: 2vw;
+    }
+    
+    .img img{
+        height: 100px;
 
+    }
+    
+    
+    .info-container h2 {
+        margin: 0.2vh 0;
+        font-size: 11pt;
+    }
+    
+    .info-container h3{
+        font-size: 7pt;
+    }
+
+    .img img:hover, .info-container h2:hover, .info-container h3:hover{
+        transform: scale(1.04); /* Aumenta el tamaño del ícono */
+        filter: brightness(1.5); /* Aumenta el brillo del ícono */
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Agrega un efecto de sombra al texto para que brille */
+        border-image: linear-gradient(to right, rgba(255, 255, 255, 0), #dfdede, rgba(255, 255, 255, 0)) 2 stretch;
+    }
+    
+    
     /* LINKS FOOTER CONTAINER */
     .linqsContainer {
         display: flex;
@@ -726,115 +612,8 @@ a:hover i {
         font-size: 12px;
     }    
 }
-/* INPUT CHECK IDIOMA */
-.lang{
-    float: right;
-    color: white;
-}
-
-@media screen and (min-width: 2000px) {
-
-    *, *::before, *::after {
-        max-width: 100vw; /*Con esto evitamos que se desborde el contenido*/
-    }
-
-    #nav-links li a{
-        font-size: 200%;
-    }
-
-    #home{
-        background: none;
-        background: url(/Assets/img/Window\ grey.png);
-        background-size: 110%;
-        background-position-x: 70%;
-    }
-
-    .home-Title{
-        padding-top: 0;
-    }
-
-    .home-Title a{
-        padding-top: 0;
-        margin-top: 0;
-        scale: 150%;
-        transform: translateY(-10%);
-        filter: drop-shadow(10px 10px 20px rgb(0, 0, 0)); /* Utiliza drop-shadow para aplicar el sombreado */
-    }
-
-    .home-Title a img{
-        filter: drop-shadow(10px 10px 20px rgb(0, 0, 0)); /* Utiliza drop-shadow para aplicar el sombreado */
-
-    }
-
-    .in-dev-container{
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-        position: inherit;
-        filter: drop-shadow(10px 10px 20px rgb(0, 0, 0)); /* Utiliza drop-shadow para aplicar el sombreado */
-        transform: translateY(130%);
-    }
-
-    .in-dev{
-        justify-content: center;
-        text-align: center;
-        display: flex;
-        position: inherit;
-        font-size: 3vw;
-        filter: drop-shadow(10px 10px 20px rgb(0, 0, 0)); /* Utiliza drop-shadow para aplicar el sombreado */
-
-    }
-
-    .arrows-down{
-        transform: translateY(480%); 
-    }
-
-    @keyframes Down {
-        0%{
-            transform: translateY(480%);
-        }
-
-        50%{
-            transform: translateY(500%);
-        }
-
-        100%{
-            transform: translateY(480%);
-        }
-    }
-
-    .presentation{
-        border-top: 0.5px solid transparent;
-        border-bottom: 1px solid transparent;
-        border-image: linear-gradient(to right, rgba(255, 255, 255, 0), #dfdede, rgba(255, 255, 255, 0)) 2 stretch;
-        filter: brightness(1.5); /* Ajusta el brillo según sea necesario */
-        outline: 1px solid transparent; /* Agrega un contorno adicional */    
-    }
 
 
-}
-
-/*Para pantallas móviles especiales*/
-@media screen and (max-width: 400px) {
-    .arrows-down{
-        transform: translateY(480%); 
-    }
-
-    @keyframes Down {
-        0%{
-            transform: translateY(200%);
-        }
-
-        50%{
-            transform: translateY(230%);
-        }
-
-        100%{
-            transform: translateY(200%);
-        }
-    }
-}
 /* CHECKBOX IDIOMA */
 /* INPUT CHECK IDIOMA */
 .lang{
@@ -884,7 +663,3 @@ a:hover i {
 .lang span{
     font-size: 17px;
 }
-
-
-
-

@@ -85,10 +85,39 @@ nav{
 .title{
     align-items: center;
     color: white;
+    text-align: center; 
+    padding: 10px;
 }
 
 
+/* TEXTO INPUT CHECK IDIOMA */
+.lang span {
+    font-size: 12px;
+}    
 
+/* INPUT CHECK IDIOMA */
+.lang{
+float: right;
+color: white;
+}
+
+/* CHECKBOX IDIOMA */
+/* INPUT CHECK IDIOMA */
+.lang{
+    float: right;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.lang{
+    margin-right: 10px;
+    position: fixed;
+    z-index: 10;
+    right: 0;
+}
+.lang span{
+    font-size: 17px;
+}
 
 
 
@@ -99,7 +128,9 @@ footer{
     color: white;
 }
 
-
+.reg{
+    margin-top: 100px;
+}
 
 
 
