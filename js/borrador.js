@@ -1,59 +1,37 @@
-document.addEventListener("DOMContentLoaded",function(){
-
-const images = document.querySelectorAll(".imgGrid");
-const lightbox = document.getElementById("lightbox");
-const lightboxImagen = document.getElementById("lightboxImagen");
-const arrLeft = document.querySelector(".arrow-left");
-const arrRight = document.querySelector(".arrow-right");
-const cerrarLightbox = document.getElementById("cerrarLightbox");
-
-let imgIndex = 0;
-
-function abrirLightbox(url) {
-    lightboxImagen.src = url;
-    lightbox.style.display = "block";
-}
-
-images.forEach((item, index) => {
-    item.addEventListener('click', event => {
-        const url = event.target.src; // RESCATA EL SRC DE LA IMAGEN
-        imgIndex = index;
-        abrirLightbox(url);
+/* ORIGINAL */
+/* EVENTO ESPERA QUE CARGUE TODO EL DOM PARA DESPUES EJECUTAR EL CONTENIDO */
+document.addEventListener('DOMContentLoaded',function(){
+    const images = document.querySelectorAll(".imgGrid");
+    const arrLeft = document.querySelector(".arrow-left");
+    const arrRight = document.querySelector(".arrow-right");
+    /* LIGHTBOX */
+    //CREA LA FUNCION PARA ABRIR IMAGEN EN LIGHTBOX 
+    function abrirLightbox(url) {
+        lightboxImagen.src = url;
+        lightbox.style.display = "block";
+    }
+    //ITERA CADA ELEMENTO .IMGGRID Y LE ASIGNA EVENTO CLICK PARA QUE EJECUTE FUNC ABRIRLIGHTBOX
+    images.forEach(item => {
+        item.addEventListener('click', event => {
+            const url = event.target.src; // RESCATA EL SRC DE LA IMAGEN
+            abrirLightbox(url);
+        });
     });
-});
-
-// EVENTO CERRAR LIGHTBOX PARA BOTON
-cerrarLightbox.addEventListener("click", function() {
-    lightbox.style.display = "none";
-});
-
-// CERRAR LIGHTBOX CLICKEANDO AFUERA DE LA IMAGEN
-lightbox.addEventListener("click", function(event) {
-    if (event.target === lightbox) {
+    // EVENTO CERRAR LIGHTBOX PARA BOTON
+    cerrarLightbox.addEventListener("click", function() {
         lightbox.style.display = "none";
-    }
-});
-
-// CERRAR LIGHTBOX CON TECLA "ESC"
-document.addEventListener("keydown", function(event) {
-    if (event.key === "Escape") {
+    });
+    //CERRAR LIGHTBOX CLICKEANDO AFUERA DE LA IMAGEN
+    lightbox.addEventListener("click", function() {
         lightbox.style.display = "none";
-    }
-});
-
-// FUNCIONALIDAD DE LAS FLECHAS
-arrLeft.addEventListener("click", function(event) {
-    event.stopPropagation();
-    imgIndex = (imgIndex > 0) ? imgIndex - 1 : images.length - 1;
-    lightboxImagen.src = images[imgIndex].src;
-});
-
-arrRight.addEventListener("click", function(event) {
-    event.stopPropagation();
-    imgIndex = (imgIndex < images.length - 1) ? imgIndex + 1 : 0;
-    lightboxImagen.src = images[imgIndex].src;
-});
-/* CAMBIO DE IDIOMA */
+    });
+    // CERRAR LIGHTBOX CON TECLA "ESC"
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "Escape") {
+            lightbox.style.display = "none";
+        }
+    });
+    /* CAMBIO DE IDIOMA */
     /* RESCATO CHECKBOX EN VARIABLE CHECK */
     var check = document.querySelector(".check");
     /* A ESA VAR LE AGREGO EVENTO CLICK LLAMANDO A FUNCION IDIOMA */
@@ -68,7 +46,6 @@ arrRight.addEventListener("click", function(event) {
         }
     }
 
-    
     /* MENU */
     
     const body = document.body;
@@ -157,5 +134,63 @@ arrRight.addEventListener("click", function(event) {
             }
         });
     });
+})
 
+
+/*  */
+
+document.addEventListener("DOMContentLoaded",function(){
+    const images = document.querySelectorAll(".imgGrid");
+    const lightbox = document.querySelector(".lightbox");
+    const mainImg = document.querySelector("#lightboxImagen");
+    const arrLeft = document.querySelector(".arrow-left");
+    const arrRight = document.querySelector(".arrow-right");
+
+    let imgIndex = 0;
+    
+    images.forEach(img => {
+        img.addEventListener('click', e => {
+            mainImg.src = e.target.src;
+
+            imgIndex = [...images].indexOf(img);
+            /* show lightbox */
+            lightbox.style.display = 'block';
+            /* smoth transition */
+            setTimeout(() => {
+                lightbox.style.opacity = '1';
+            },10);
+        });
+    });
+    /* close lightbox */
+    window.addEventListener("click", e=>{
+        if(e.target.classList.contains('lightbox')){
+            lightbox.style.opacity = '0';
+            setTimeout(() =>{
+                lightbox.style.display = 'none';
+            },350);
+        }
+    });
+    /* change previus image */
+    arrLeft.addEventListener("click", () =>{
+        imgIndex--;
+        /* if the index is below the first image */
+        if(imgIndex < 0){
+            /* set index to laste image */
+            imgIndex = images.length -1;
+        }
+        /* set main image to updated image index */
+        mainImg.src = images[imgIndex].src;
+
+    })
+    /* change next image */
+    arrRight.addEventListener("click", ()=> {
+        /* incremet image index */
+        imgIndex++;
+        /* fi index is above the last image */
+        if(imgIndex > images.length -1 ){
+            imgIndex = 0;
+        }
+        /* Set main image to updated image index */
+        mainImg.src = images[imgIndex].src;
+    })
 })

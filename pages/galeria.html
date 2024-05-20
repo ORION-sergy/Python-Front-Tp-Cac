@@ -11,7 +11,7 @@
     <!-- TOP SECTION -->
     <div class="topSection">
         <!-- NAV -->
-        <nav class="navG">
+        <!-- <nav class="navG">
             <div class="navG-container"> 
                 <div class="navG-content">
                     <a href="../index.html">
@@ -21,7 +21,21 @@
                     <p>/ GALERIA</p>
                 </div>
             </div>
-        </nav>
+        </nav> -->
+        <header>
+            <div class="menu-container">
+                <span id="menu-icon" class="menu-toggle fa-solid fa-bars"> </span>
+                <nav class="navbar-menu">
+                    <ul id="nav-links">
+                        <li><a href="#info" class="smooth-scroll">+Info</a></li>
+                        <li><a href="pages/galeria.html" class="smooth-scroll">Galería</a></li>
+                        <li><a href="/pages/register.html" class="smooth-scroll">Registrarse</a></li>
+                        <li><a href="" class="smooth-scroll">Quiénes somos</a></li>
+                        <li><a href="#footer" class="smooth-scroll">Contactanos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
         <!-- CHECK IDIOMA -->
         <div class="lang">
             <span class="en">English</span>
@@ -32,7 +46,7 @@
         <div class="videoG-container">
             <video src="../Assets/video/videoFinal.mp4" muted controls autoplay loop></video>
         </div>
-        <!-- ARROW LAT -->
+        <!-- ARROW DOWN -->
         <div class="arrows-down">
             <i class="fa-solid fa-angles-down"></i>
         </div>
@@ -46,16 +60,12 @@
                 <div class="imgCartelContainer">
                     <img src="../Assets/img/The-abbys-3-removebg.png" alt="Abyss">
                 </div>
-                <!-- TEXTO -->
-                <p>un videojuego que promete llevar a los jugadores a un Buenos Aires futurista, transformado por un conflicto bélico.</p>
             </div>
             <div class="imgContainer1st">
                 <img src="../Assets/img/fondoGaleria.jpg" alt="Obelisco invasion">
+                <!-- TEXTO -->
+                <p>un videojuego que promete llevar a los jugadores a un Buenos Aires futurista, transformado por un conflicto bélico.</p>
             </div>
-        </div>
-        <!-- SEPARADOR -->
-        <div class="sep">
-            <i class="fa-solid fa-ellipsis"></i>
         </div>
         <!-- 2nd -->
         <div class="container2nd">
@@ -116,6 +126,12 @@
             <!-- LIGHTBOX -->
             <div id="lightbox" class="lightbox">
                 <img id="lightboxImagen" src="" alt="galeria">
+                <div class="arrow arrow-left">
+                    <i class="fas fa-arrow-left"></i>
+                </div>
+                <div class="arrow arrow-right">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
                 <div>
                     <button id="cerrarLightbox">Cerrar</button>
                 </div>

@@ -12,6 +12,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
 ::-webkit-scrollbar {
     display: none; 
 }
@@ -98,7 +102,7 @@
             color: white;
         }
         .linksLatG ul li a i{
-            font-size: 20px;
+            font-size: 29px;
         }
         a:hover i {
             color: #ffffff;
@@ -175,11 +179,12 @@
             padding-bottom: 40px;
             width: 100%;
         }
-        .container1st-container p {
-            max-width: 480px;
-            font-size: 21px;
+        .imgContainer1st p {
+            margin: 0 auto;
+            max-width: 680px;
+            font-size: 29px;
             text-align: center;
-            padding-bottom: 24px;
+            padding: 64px 0;
         }
         .imgContainer1st{
             width: 100%;
@@ -201,7 +206,7 @@
             margin-right: auto;
             width: 80%;
             column-gap: 90px;
-            margin-top: 100px;
+            margin-top: 40px;
         }
         .cont2ndImg{
             padding-bottom: 0%;
@@ -219,7 +224,7 @@
         }
         .cont2ndTxt p{
             max-width: 480px;
-            font-size: 21px;
+            font-size: 29px;
             text-align: center;
         }
     /* 3rd */
@@ -251,7 +256,7 @@
         }
         .cont3rdImgTxt p{
             max-width: 480px;
-            font-size: 21px;
+            font-size: 29px;
             text-align: center;
         }
 /* BOTTOM SECTION */
@@ -290,8 +295,8 @@
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
         background-color: rgba(0, 0, 0, 0.7);
         z-index: 999;
     }
@@ -307,6 +312,28 @@
         max-width: 92%;
         max-height: 92%;
     }
+    .arrow{
+        font-size: 1.4em;
+        position: fixed;
+        top: 50%;
+        text-align: center;
+        color: #ccc;
+        transition: 0.2s;
+        cursor: pointer;
+        z-index: 1000;
+    }
+    .arrow:hover{
+        color: #fff;
+    }
+    .arrow-left{
+        left: -45%;
+        width: 10px;
+    }
+    .arrow-right{
+        right: -45%;
+        width: 10px;
+    }
+
     #cerrarLightbox {
         margin: 0 auto;
         position: relative;
@@ -318,6 +345,7 @@
         border-radius: 5px;
         font-family: Bebas Neue;
         cursor: pointer;
+        z-index: 3000;
     }
 /* FOOTER */
     footer{
@@ -360,7 +388,7 @@
         color: white;
     }
     .presentation p{
-        font-size: 17px;
+        font-size: 29px;
         margin-top: 4px;
         margin-left: 4px;
     }
@@ -511,7 +539,7 @@
         }
         /* LINKS LATERALES li ICON */
         .linksLatG ul li a i {
-            font-size: 12px;
+            font-size: 21px;
         }
         /* MID SECTION */
         .midSection {
@@ -531,16 +559,17 @@
             width: 100%;
         }
         /* TEXTO ABAJO DE IMAGEN CARTEL */
-        .container1st-container p {
-            font-size: 11px;
+        .imgContainer1st p {
+            padding: 15px 0;
+            font-size: 21px;
         }
         /* 2ND TEXTO */
         .cont2ndTxt p {
-            font-size: 11px;
+            font-size: 21px;
         }
         /* 3RD TEXTO BAJO IMAGEN */
         .cont3rdImgTxt p {
-            font-size: 11px;
+            font-size: 21px;
         }
         /* BOTTOM SECTION */
         /* GRILLA DE GRID */
@@ -566,11 +595,11 @@
         }
         /* TEXTO DE FOOTER GAME */
         .presentation p{
-            font-size: 12px;
+            font-size: 18px;
         }
         /* DEVELOPERS FONTSIZE */
         .devs{
-            font-size: 8px;
+            font-size: 12px;
         }
         /* CHECKBOX IDIOMA CHECK::AFTER */
         .check::after {
@@ -583,3 +612,200 @@
             font-size: 12px;
         }
     }
+/*  */
+
+/*Menú por defecto*/
+nav{
+    height: 5vh;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;/*con respecto al eje principal, que es la fila(horizontal)*/
+    align-items: center; /*con respecto al eje secundario, que es la columna(vartical)*/
+    padding: 0px 20px; /* Ajusta el espacio desde los bordes derecho e izquierdo */
+    z-index: 10;
+}
+/* menu oculto  */
+.menu-toggle, #menu-icon{
+    display: none; /* Por defecto, oculta el botón del menú */
+}
+.navbar-menu {
+    background: transparent; /* Hace que el fondo del navbar sea transparente */
+}
+
+#nav-links{
+    display: flex;
+    /*Ubicamos los li*/
+    gap: 30px; /*defino el tamano de los huecos entre los items*/
+    list-style: none;
+}
+
+#nav-links li{
+    transition: transform 0.2s ease, filter 0.2s ease; /* Separar la transición para transform y filter */
+    border-bottom: 1px solid transparent;
+
+}
+
+#nav-links li:hover{
+    color: #ffffff; /* Cambia el color del ícono al pasar el ratón por encima */
+    text-decoration: none; /* Elimina el subrayado del ícono al pasar el ratón por encima */
+    transform: scale(1.05); /* Aumenta el tamaño del ícono */
+    filter: brightness(10); /* Aumenta el brillo del ícono */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Agrega un efecto de sombra al texto para que brille */
+    border-image: linear-gradient(to right, rgba(255, 255, 255, 0), #dfdede, rgba(255, 255, 255, 0)) 2 stretch;
+    filter: brightness(1.5); /* Ajusta el brillo según sea necesario */
+    outline: 1px solid transparent; /* Agrega un contorno adicional */
+
+}
+
+#nav-links li a{
+    text-decoration: none;
+    color: rgb(223, 222, 222);
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 130%;
+    font-weight: 300; /* Ajusta el grosor de la fuente a 300 (más delgada) o a tu preferencia */
+}
+
+/* MAX WIDT 1024 */
+@media screen and (max-width: 1900px) {
+.menu-container {
+    position: absolute;
+    display: flex; /* Ajusta el diseño para dispositivos móviles */
+    justify-content: space-between; /* Distribuye los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    padding: 10px; /* Ajusta el espacio alrededor del menú */
+}
+
+.menu-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(9, 9, 9, 0.215); /* Fondo semitransparente */
+    backdrop-filter: blur(5px); /* Aplica un filtro de desenfoque */
+    z-index: -1; /* Coloca el fondo borroso detrás del menú */
+    pointer-events: none; /* Permite que los eventos pasen a través del pseudo-elemento */
+    opacity: 0; /* Inicialmente oculta el fondo borroso */
+    transition: opacity 0.3s ease; /* Agrega una transición suave para la opacidad */
+}
+
+.menu-container.active::before {
+    opacity: 2; /* Muestra el fondo borroso cuando el menú está activo */
+}
+
+/* Agregar estilo para deshabilitar el scroll cuando el menú está activado */
+body.menu-open {
+    overflow: hidden;
+}
+/* Overlay para el área del menú */
+.menu-toggle {
+    display: inline-block;
+    position: absolute;
+    text-decoration: none;
+    margin: 1vh 0 0 0;
+    padding: 20% 10%;
+    color: #dfdede;
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+    z-index: 10000;
+}
+
+.menu-toggle:hover {
+    transform: scale(1.2); /* Aumenta el tamaño del ícono */
+    filter: brightness(3); /* Aumenta el brillo del ícono */
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5)) brightness(120%); /* Aplica un filtro de sombra suave y un filtro de brillo al ícono */
+}
+
+#menu-icon{
+    display: inline-block;
+}
+
+.navbar-menu {
+    display: none; /* Por defecto, oculta el menú en dispositivos móviles */
+    position: absolute;
+    z-index: 1000; /* Asegura que el menú esté en una capa superior */
+    top: 12%;
+    left: 20px; /* Ajuste para que el menú esté pegado al borde izquierdo */
+    background: transparent; /* Cambia el color de fondo del menú desplegable a transparente */
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    transition: opacity 0.3s ease; /* Agrega una transición de opacidad */
+    opacity: 0; /* Inicialmente establece la opacidad en 0 para ocultar el menú */
+}
+
+.navbar-menu.active {
+    display: flex; /* Muestra el menú cuando la clase 'active' está presente */
+    flex-direction: column;
+    align-items: flex-start; /* Alinea los elementos del menú a la izquierda */
+    opacity: 1; /* Hace que el menú sea visible al activar la clase 'active' */
+    padding: 0;
+    margin: 0;
+    left: 15px;
+    width: fit-content;
+    z-index: 5000;
+}
+
+
+/* Estilos para los ítems del menú */
+#nav-links {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Restablece cualquier margen previo */
+}
+
+#nav-links li {
+    border-image: linear-gradient(to right, rgba(255, 255, 255, 0), #dfdede, rgba(255, 255, 255, 0)) 2 stretch;
+    text-align: justify;
+    border-bottom: 1px solid #dfdede; /* Línea divisoria entre elementos li */
+    outline: 1px solid transparent; /* Agrega un contorno adicional */
+    filter: brightness(1.5); /* Ajusta el brillo según sea necesario */
+    margin: -10px 0; /* Establece un margen vertical negativo */
+    padding: 0 0 10px 0; /* Ajusta el padding */
+    text-align: start;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+
+
+#nav-links li:last-child {
+    margin-bottom: -1px; /* Márgenes negativos para superponer la línea divisoria */
+
+}
+
+
+.navbar-menu.active #nav-links li {
+    opacity: 1; /* Hace que los ítems sean visibles al activar la clase 'active' en el menú */
+    transform: translateX(20px); /* Restaura la posición original de los ítems */
+}
+
+/* Animación de aparición de los ítems del menú */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+#nav-links{
+    margin-top: 35px;
+}
+#nav-links li a{
+    font-size: 130%;
+}
+}
+
+/*  */
+@media screen and (min-width: 2000px) {
+
+    #nav-links li a{
+        font-size: 80%;
+    }
+}
