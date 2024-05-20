@@ -163,7 +163,7 @@ main{
     display: flex;
     flex-direction: column;
     padding: 10vh 10vw 0 10vw; /* Utilizando porcentajes para el relleno */
-    justify-content: top center;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
     margin: 0;
@@ -185,8 +185,8 @@ main{
 .row-container{
     display: flex;
     flex-direction: row;
-    align-items:top center; /*Al estar los elementos puestos en fila, align-items y justify-content invierten sus funciones*/
-    justify-content: top center;
+    align-items: flex-start; /*Al estar los elementos puestos en fila, align-items y justify-content invierten sus funciones*/
+    justify-content: flex-start;
 
     padding: 0;
     margin: 1vh 2vw;
@@ -209,7 +209,7 @@ main{
     height: 250px;
     width: auto;
     display: flex;
-    justify-content: top center;
+    justify-content: center;
     align-items: center;
 }
 
@@ -501,7 +501,7 @@ a:hover i {
     main{
         width: 100%;
         display: flex;
-        justify-content: top center;
+        justify-content: center;
         align-items: center;
         padding-top: 11vh;
     }
@@ -538,8 +538,8 @@ a:hover i {
     .row-container{
         display: flex;
         flex-direction: row;
-        align-items:top center; /*Al estar los elementos puestos en fila, align-items y justify-content invierten sus funciones*/
-        justify-content: top center;
+        align-items: center; /*Al estar los elementos puestos en fila, align-items y justify-content invierten sus funciones*/
+        justify-content: center;
     
         padding: 0;
         margin: 1vh 2vw;
