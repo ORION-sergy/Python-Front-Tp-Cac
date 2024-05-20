@@ -726,7 +726,11 @@ a:hover i {
         font-size: 12px;
     }    
 }
-
+/* INPUT CHECK IDIOMA */
+.lang{
+    float: right;
+    color: white;
+}
 
 @media screen and (min-width: 2800px) {
 
