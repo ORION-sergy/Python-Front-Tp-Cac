@@ -1,3 +1,8 @@
+     document.addEventListener("DOMContentLoaded", function(){
+
+
+
+
      /* CAMBIO DE IDIOMA */
      var check = document.querySelector(".check");
      check.addEventListener('click',idioma);
@@ -9,5 +14,14 @@
              location.href = "en/registerEN.html";
          }
      }
+
+
+
+     })
+     
+     
+     
+     
+     
 
  
