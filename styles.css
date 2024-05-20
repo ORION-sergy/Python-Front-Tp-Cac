@@ -728,7 +728,7 @@ a:hover i {
 }
 
 
-@media screen and (min-width: 2000px) {
+@media screen and (min-width: 2800px) {
 
     *, *::before, *::after {
         max-width: 100vw; /*Con esto evitamos que se desborde el contenido*/
