@@ -485,6 +485,11 @@
             flex-direction: column;
         }
     }
+
+
+
+
+    
 /* SMALL max-width: 640px */
     @media (max-width: 640px) {
         /* NAV ICON */
