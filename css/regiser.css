@@ -2,12 +2,27 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Bebas Neue", sans-serif;
+}
+/* URL FUENTE DE TEXTO */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jersey+25&family=Oswald:wght@200..700&display=swap');
+/* FUENTE TEXTO */
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 body{
     height: 100vh;
-background-image: url(/Assets/img/galeriaMidSection.jpg);  
-}
+    background-image: url(/Assets/img/galeriaMidSection.jpg);  
+    display: flex;
+    flex-direction: column;
 
+}
+html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
 nav{
     height: 10vh;
     display: flex;
@@ -61,6 +76,7 @@ nav{
 
 
 .Formu {
+    flex: 1;
     width: 50%;
     margin: 0 auto;
     color: white;
@@ -127,6 +143,44 @@ footer{
     margin-top: 4px;
     margin-left: 4px;
 }
+.linksLatG{
+    display: flex;
+    top: 0%;
+    bottom: 0%;
+    right: 0%;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+.linksLatG ul{
+    display: flex;
+    gap: 4px 16px;
+    margin-top: 20px;
+    margin-right: 16px;
+    list-style: none;
+}
+.linksLatG ul li{
+    text-align: center;
+    padding: 4px 0;
+}
+.linksLatG li a{
+    text-decoration: none;
+    color: white;
+}
+.linksLatG ul li a i{
+    font-size: 20px;
+}
+a:hover i {
+    color: #ffffff;
+    text-decoration: none;
+    transform: scale(1.2);
+    filter: brightness(10);
+}
+.links a p:hover {
+    transform: scale(1.1);
+    transition-duration: 0s;
+    filter: brightness(150%);
+}
 /* DEVELOPERS */
 .devs{
     background-color: black;
@@ -156,6 +210,7 @@ footer{
 /* INPUT CHECK IDIOMA */
 .lang{
     float: right;
+    color: white;
 }
 .check{
     position: relative;
@@ -270,6 +325,7 @@ footer{
     /* LINKS LATERALES li ICON */
     .linksLatG ul li a i {
         font-size: 12px;
+        color: white;
     }
     /* MID SECTION */
     .midSection {
