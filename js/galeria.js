@@ -1,4 +1,74 @@
-document.addEventListener('DOMContentLoaded', function() {
+/* EVENTO ESPERA DE CARGA AL DEL DOM PARA INICIAR LOS SCRIPTS */
+document.addEventListener("DOMContentLoaded",function(){
+    /* RESCATA EN VARIABLES LOS ELEMENTOS A TRABAJAR */
+    const images = document.querySelectorAll(".imgGrid");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImagen = document.getElementById("lightboxImagen");
+    const arrLeft = document.querySelector(".arrow-left");
+    const arrRight = document.querySelector(".arrow-right");
+    const cerrarLightbox = document.getElementById("cerrarLightbox");
+    /* INICIALIZO VARIABLE EN 0 PARA LUEGO INCREMENTAR O DISMINUIR SU VALOR */
+    let imgIndex = 0;
+    /* FUNCION ABRIR LIGHTBOX */
+    function abrirLightbox(url) {
+        lightboxImagen.src = url;
+        lightbox.style.display = "block";
+    }
+    /* ITERA SOBRE LOS ELEMENTOS CON CLASE IMGGRID CREANDO FUNCIONES Y EVENTOS PARA CADA UNO DE ELLOS */
+    images.forEach((item, index) => {
+        item.addEventListener('click', event => {
+            const url = event.target.src; // RESCATA EL SRC DE LA IMAGEN
+            imgIndex = index;
+            abrirLightbox(url);
+        });
+    });
+    // EVENTO CERRAR LIGHTBOX PARA BOTON
+    cerrarLightbox.addEventListener("click", function() {
+        lightbox.style.display = "none";
+    });
+    // CERRAR LIGHTBOX CLICKEANDO AFUERA DE LA IMAGEN
+    lightbox.addEventListener("click", function(event) {
+        if (event.target === lightbox) {
+            lightbox.style.display = "none";
+        }
+    });
+    // CERRAR LIGHTBOX CON TECLA "ESC"
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "Escape") {
+            lightbox.style.display = "none";
+        }
+    });
+    // FUNCIONALIDAD DE LAS FLECHA IZQUIERDA
+    arrLeft.addEventListener("click", function(event) {
+        event.stopPropagation();
+        imgIndex = (imgIndex > 0) ? imgIndex - 1 : images.length - 1;
+        lightboxImagen.src = images[imgIndex].src;
+    });
+    // FUNCIONALIDAD DE LAS FLECHA DERECHA
+    arrRight.addEventListener("click", function(event) {
+        event.stopPropagation();
+        imgIndex = (imgIndex < images.length - 1) ? imgIndex + 1 : 0;
+        lightboxImagen.src = images[imgIndex].src;
+    });
+
+    /* --CAMBIO DE IDIOMA-- */
+
+    /* RESCATO CHECKBOX EN VARIABLE CHECK */
+    var check = document.querySelector(".check");
+    /* A ESA VAR LE AGREGO EVENTO CLICK LLAMANDO A FUNCION IDIOMA */
+    check.addEventListener('click',idioma);
+    /* FUNCION CON CONDICIONAL CAMBIA DE POSICION SI CHECKBOX ESTA CHEKEADO = TRUE O NO = FALSE */
+    function idioma(){
+        let id = check.checked;
+        if(id == true){
+            location.href = "../galeria.html";
+        }else{
+            location.href = "en/galeriaEn.html";
+        }
+    }
+
+    /* MENU */
+    
     const body = document.body;
     const menuToggle = document.querySelector('.menu-toggle');
     const navbarMenu = document.querySelector('.navbar-menu');
@@ -85,15 +155,5 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    /* CAMBIO DE IDIOMA */
-    var check = document.querySelector(".check");
-    check.addEventListener('click',idioma);
-    function idioma(){
-        let id = check.checked;
-        if(id == true){
-            location.href = "../../index.html";
-        }else{
-            location.href = "pages/en/indexEn.html";
-        }
-    }
-});
+
+})

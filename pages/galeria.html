@@ -3,60 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <script src="https://kit.fontawesome.com/3f5fbf0a8f.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="galeria.css">
+    <link class="favicon" rel="shortcut icon" href="../Assets/logo/tentacle-strike_38802.png" type="image/x-icon" sizes="64x64">
+    <link rel="stylesheet" href="../css/galeria.css">
     <title>Galeria</title>
 </head>
-
 <body>
     <!-- TOP SECTION -->
-    <section class="topSection">
+    <div class="topSection">
         <!-- NAV -->
-        <nav class="navG">
-            <div class="navG-container"> 
-                <div class="navG-content">
-                    <a href="../index.html">
-                        <i class="fa-solid fa-arrow-left"></i>
-                        <p>INICIO</p>
-                    </a>
-                    <p>/ GALERIA</p>
-                </div>
+        <header>
+            <div class="menu-container">
+                <span id="menu-icon" class="menu-toggle fa-solid fa-bars"> </span>
+                <nav class="navbar-menu">
+                    <ul id="nav-links">
+                        <li><a href="../index.html#info" class="smooth-scroll">+Info</a></li>
+                        <li><a href="pages/galeria.html" class="smooth-scroll">Galería</a></li>
+                        <li><a href="/pages/register.html" class="smooth-scroll">Registrarse</a></li>
+                        <li><a href="team.html" class="smooth-scroll">Quiénes somos</a></li>
+                    </ul>
+                </nav>
             </div>
-        </nav>
+        </header>
+        <!-- CHECK IDIOMA -->
+        <div class="lang">
+            <span class="en">English</span>
+                <input type="checkbox" class="check" checked>
+            <span class="sp">Spanish</span>
+        </div>
         <!-- VIDEO -->
         <div class="videoG-container">
-            <!-- <iframe class="" id="video" style="height: 100vh; width: 100vw;" src="https://www.youtube.com/embed/9s-5tR0fGfM?enablejsapi=1&controls=1&modestbranding=1" frameborder="0"></iframe> -->
-            <video src="../Assets/img/videoFinal.mp4" muted controls autoplay loop></video>
+            <video src="../Assets/video/videoFinal.mp4" muted controls autoplay loop></video>
         </div>
-        <!-- LINKS LATERALES -->
-        <div class="linksLatG">
-            <ul>
-                <li>
-                    <a href="https://www.youtube.com/@ThePathIntoTheAbyss" target="_blank">
-                        <i class="fa-brands fa-youtube"></i>
-                    </a>
-                </li>
-                <li>            
-                    <a href="https://www.instagram.com/thepathintotheabyss? utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://x.com/Abyssthegame" target="_blank">
-                        <i class="fa-brands fa-x-twitter"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://t.co/AwZ2kayxKx" target="_blank">
-                        <i class="fa-brands fa-discord"></i>
-                    </a>
-                </li>            
-            </ul>
+        <!-- ARROW DOWN -->
+        <div class="arrows-down">
+            <i class="fa-solid fa-angles-down"></i>
         </div>
-    </section>
+    </div>
     <!-- MID SECTION -->
-    <section class="midSection" >
+    <div class="midSection" >
         <!-- 1st -->
         <div class="container1st">
             <div class="container1st-container">
@@ -64,16 +49,12 @@
                 <div class="imgCartelContainer">
                     <img src="../Assets/img/The-abbys-3-removebg.png" alt="Abyss">
                 </div>
-                <!-- TEXTO -->
-                <p>un videojuego que promete llevar a los jugadores a un Buenos Aires futurista, transformado por un conflicto bélico.</p>
             </div>
             <div class="imgContainer1st">
                 <img src="../Assets/img/fondoGaleria.jpg" alt="Obelisco invasion">
+                <!-- TEXTO -->
+                <p>un videojuego que promete llevar a los jugadores a un Buenos Aires futurista, transformado por un conflicto bélico.</p>
             </div>
-        </div>
-        <!-- SEPARADOR -->
-        <div class="sep">
-            <i class="fa-solid fa-ellipsis"></i>
         </div>
         <!-- 2nd -->
         <div class="container2nd">
@@ -97,9 +78,9 @@
                 <p>El juego promete ser una carta de amor a Buenos Aires, retratando locaciones icónicas como la Avenida 9 de Julio, la Biblioteca Nacional, la Plaza de Mayo, los bosques de Ezeiza, y mucho más.</p>
             </div>
         </div>
-    </section>
+    </div>
     <!-- BOTTOM SECTION -->
-    <section class="bottomSection bg-black">
+    <div class="bottomSection bg-black">
         <div class="bottomGridContainer">
             <!-- GRILLA DE IMAGENES -->
             <div class="bottomGridContainer-content">
@@ -122,10 +103,10 @@
                     <img class="imgGrid img6" src="../Assets/img/hole.png" alt="Hole">
                 </div>
                 <div>
-                    <img class="imgGrid img7" src="../Assets/img/woods Stalker.png" alt="Woods Stalker">
+                    <img class="imgGrid img7" src="../Assets/img/woods-Stalker.png" alt="Woods Stalker">
                 </div>
                 <div>
-                    <img class="imgGrid img8" src="../Assets/img/buenos aires" alt="Buenos Aires">
+                    <img class="imgGrid img8" src="../Assets/img/buenos-aires" alt="Buenos Aires">
                 </div>
                 <div>
                     <img class="imgGrid img9" src="../Assets/img/fire.webp" alt="Fire">
@@ -134,12 +115,18 @@
             <!-- LIGHTBOX -->
             <div id="lightbox" class="lightbox">
                 <img id="lightboxImagen" src="" alt="galeria">
+                <div class="arrow arrow-left">
+                    <i class="fas fa-arrow-left"></i>
+                </div>
+                <div class="arrow arrow-right">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
                 <div>
                     <button id="cerrarLightbox">Cerrar</button>
                 </div>
             </div>                
         </div>
-    </section>
+    </div>
     <!-- FOOTER -->
     <footer>
         <div class="presentation">
@@ -155,7 +142,7 @@
                 </div>
             </div>
             <p>ADVERTENCIA: Este juego contiene violencia intensa, escenas de combate gráfico y no es apto para menores de 18 años</p>
-            <!-- LINKS LATERALES -->
+            <!-- LINKS SOCIAL MEDIA -->
             <div class="linksLatG">
                 <ul>
                     <li>
@@ -164,7 +151,7 @@
                         </a>
                     </li>
                     <li>            
-                        <a href="https://www.instagram.com/thepathintotheabyss? utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                        <a href="https://www.instagram.com/thepathintotheabyss?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                     </li>
@@ -188,33 +175,6 @@
             <a href="#">Contactanos</a>
         </div>
     </footer>
-    <script>
-        //ABRE IMAGEN EN LIGHTBOX 
-        function abrirLightbox(url) {
-            lightboxImagen.src = url;
-            lightbox.style.display = "block";
-        }
-        //ITERA CADA ELEMENTO .IMGGRID Y LE ASIGNA EVENTO CLICK PARA QUE EJECUTE FUNC ABRIRLIGHTBOX
-        document.querySelectorAll('.imgGrid').forEach(item => {
-            item.addEventListener('click', event => {
-                const url = event.target.src; // RESCATA URL DE LA IMAGEN
-                abrirLightbox(url);
-            });
-        });
-        // EVENTO CERRAR LIGHTBOX PARA BOTON
-        cerrarLightbox.addEventListener("click", function() {
-            lightbox.style.display = "none";
-        });
-        //CERRAR LIGHTBOX CLICKEANDO AFUERA DE LA IMAGEN
-        lightbox.addEventListener("click", function() {
-            lightbox.style.display = "none";
-        });
-        // CERRAR LIGHTBOX CON TECLA "ESC"
-        document.addEventListener("keydown", function(event) {
-            if (event.key === "Escape") {
-                lightbox.style.display = "none";
-            }
-        });
-    </script>
+    <script src="../js/galeria.js"></script>
 </body>
 </html>

@@ -91,9 +91,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function idioma(){
         let id = check.checked;
         if(id == true){
-            location.href = "../../index.html";
+            location.href = "../team.html";
         }else{
-            location.href = "pages/en/indexEn.html";
+            location.href = "en/teamEn.html";
         }
     }
 });

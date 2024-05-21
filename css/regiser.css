@@ -1,0 +1,569 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bebas Neue", sans-serif;
+}
+/* URL FUENTE DE TEXTO */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jersey+25&family=Oswald:wght@200..700&display=swap');
+/* FUENTE TEXTO */
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+body{
+    height: 100vh;
+    background-image: url(/Assets/img/galeriaMidSection.jpg);  
+    display: flex;
+    flex-direction: column;
+
+}
+html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+nav{
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;/*con respecto al eje principal, que es la fila(horizontal)*/
+    align-items: center; /*con respecto al eje secundario, que es la columna(vartical)*/
+    padding: 0px 20px; /* Ajusta el espacio desde los bordes derecho e izquierdo */
+}
+
+.navbar-menu {
+    background: transparent; /* Hace que el fondo del navbar sea transparente */
+}
+
+#nav-links{
+    display: flex;
+    /*Ubicamos los li*/
+    gap: 30px; /*defino el tamano de los huecos entre los items*/
+    list-style: none;
+}
+
+#nav-links li{
+    transition: transform 0.2s ease, filter 0.2s ease; /* Separar la transición para transform y filter */
+    border-bottom: 1px solid transparent;
+
+}
+
+#nav-links li:hover{
+    color: #ffffff; /* Cambia el color del ícono al pasar el ratón por encima */
+    text-decoration: none; /* Elimina el subrayado del ícono al pasar el ratón por encima */
+    transform: scale(1.05); /* Aumenta el tamaño del ícono */
+    filter: brightness(10); /* Aumenta el brillo del ícono */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Agrega un efecto de sombra al texto para que brille */
+    border-image: linear-gradient(to right, rgba(255, 255, 255, 0), #dfdede, rgba(255, 255, 255, 0)) 2 stretch;
+    filter: brightness(1.5); /* Ajusta el brillo según sea necesario */
+    outline: 1px solid transparent; /* Agrega un contorno adicional */
+
+}
+
+#nav-links li a{
+    text-decoration: none;
+    color: rgb(223, 222, 222);
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 130%;
+    font-weight: 300; /* Ajusta el grosor de la fuente a 300 (más delgada) o a tu preferencia */
+}
+/*Menú desplegable (para mobile)*/
+
+.menu-toggle, #menu-icon{
+    display: none; /* Por defecto, oculta el botón del menú */
+}
+
+
+
+.Formu {
+    flex: 1;
+    width: 50%;
+    margin: 0 auto;
+    color: white;
+}
+
+.title{
+    align-items: center;
+    color: white;
+    text-align: center; 
+    padding: 10px;
+}
+
+
+/* TEXTO INPUT CHECK IDIOMA */
+.lang span {
+    font-size: 12px;
+}    
+
+/* INPUT CHECK IDIOMA */
+.lang{
+float: right;
+color: white;
+}
+
+/* CHECKBOX IDIOMA */
+/* INPUT CHECK IDIOMA */
+.lang{
+    float: right;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.lang{
+    margin-right: 10px;
+    position: fixed;
+    z-index: 10;
+    right: 0;
+}
+.lang span{
+    font-size: 17px;
+}
+
+
+
+
+/* FOOTER */
+footer{
+    background-color: black;
+    color: white;
+}
+
+.reg{
+    margin-top: 100px;
+}
+
+
+
+.presentation {
+    background-color: black;
+    padding: 2vh 20vw;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(to right, rgba(255, 255, 255, 0), #dfdede, rgba(255, 255, 255, 0)) 2 stretch;
+    filter: brightness(1.5); 
+    outline: 1px solid transparent;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    font-family: Bebas Neue;
+}
+.footerContainer{
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
+}
+.footerContainer img{
+    max-width: 100px;
+}
+.linqsContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 8px;
+}
+.links{
+    padding-top: 4px;
+}
+.links a{
+    color: white;
+}
+.presentation p{
+    font-size: 17px;
+    margin-top: 4px;
+    margin-left: 4px;
+}
+.linksLatG{
+    display: flex;
+    top: 0%;
+    bottom: 0%;
+    right: 0%;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+.linksLatG ul{
+    display: flex;
+    gap: 4px 16px;
+    margin-top: 20px;
+    margin-right: 16px;
+    list-style: none;
+}
+.linksLatG ul li{
+    text-align: center;
+    padding: 4px 0;
+}
+.linksLatG li a{
+    text-decoration: none;
+    color: white;
+}
+.linksLatG ul li a i{
+    font-size: 20px;
+}
+a:hover i {
+    color: #ffffff;
+    text-decoration: none;
+    transform: scale(1.2);
+    filter: brightness(10);
+}
+.links a p:hover {
+    transform: scale(1.1);
+    transition-duration: 0s;
+    filter: brightness(150%);
+}
+/* DEVELOPERS */
+.devs{
+    background-color: black;
+    width: fit-content;
+    padding: 8px 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 10px;
+    text-align: center;
+    color: #DFDED040;
+    font-family: sans-serif !important;
+}
+.devs p{
+    width: fit-content;
+    margin: 0 auto;
+}
+.devs p:hover{
+    color: white;
+}
+.devs a{
+    color: #0000EE;
+    font-weight: bold;
+}
+.devs a:hover{
+    text-decoration: underline;
+}
+/* INPUT CHECK IDIOMA */
+.lang{
+    float: right;
+    color: white;
+}
+.check{
+    position: relative;
+    width: 50px;
+    background-color: black;
+}
+.check::before{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 16px;
+    border-radius: 25px;
+    background-color: black;
+}
+.check::after{
+    content: '';
+    position: absolute;
+    margin-top: .5px;
+    margin-left: 1px;
+    width: 19px;
+    height: 14px;
+    background-color: #fff;
+    border-radius: 25px;
+    transition: 0.25s;
+    border: 1px solid white;
+    box-sizing: border-box;
+}
+.check:checked::after{
+    left: 30px;
+}
+.check:checked::before{
+    
+    background-color:  black;
+}
+.lang{
+    margin-right: 10px;
+    position: fixed;
+    z-index: 10;
+    right: 0;
+}
+.lang span{
+    font-size: 17px;
+}
+/* LARGE: 1024px */
+@media (max-width: 1024px) {
+    /* VIDEO */
+    .videoG-container video {
+        height: auto;
+        width: 100%;
+    }
+    /* ARROWS DOWN */
+    .arrows-down {
+        display: none;
+    }
+}
+/* MEDIUM: max-width:  768*/
+@media (max-width: 768px) {
+    /* SEPARADOR */
+    .sep {
+        display: block;
+        text-align: center;
+    }
+    /* MID SECTION CONTENEDOR 2ND */
+    .container2nd {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 10px;
+        margin-top: 10px;
+    }
+    /* CONTENEDOR DE IMAGEN */
+    .cont2ndImg {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    /* 3RD CONTAINER */
+    .container3rd {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    /* 3RD CONTENEDOR DE IMAGEN */
+    .cont3rdImg {
+        order: -1;
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    /* CONTENEDOR DE LINKS FOOTER */
+    .linqsContainer {
+        display: flex;
+        flex-direction: column;
+    }
+}
+/* SMALL max-width: 640px */
+@media (max-width: 640px) {
+    /* NAV ICON */
+    .navG-content i {
+        font-size: 12px;
+        margin-top: -1.6px;
+    }
+    /* NAV HOME */
+    .navG-content a p {
+        font-size: 12px;
+    }
+    /* NAV GALLERY */
+    .navG-content p {
+        font-size: 12px;
+    }
+    /* LINKS LATERALES li */
+    .linksLatG ul li {
+        padding: 0px 0;
+    }
+    /* LINKS LATERALES li ICON */
+    .linksLatG ul li a i {
+        font-size: 12px;
+        color: white;
+    }
+    /* MID SECTION */
+    .midSection {
+        padding-bottom: 20px;
+    }
+    /* 1ST CONTAINER */
+    .container1st{
+        padding-top: 40px;
+    }
+    /* CONTENEDOR DE IMAGEN CARTEL */
+    .imgCartelContainer {
+        max-width: 150px;
+    }
+    /* IMAGEN TRIPODE OBELISCO*/
+    .container1st-container div img {
+        padding-bottom: 20px;
+        width: 100%;
+    }
+    /* TEXTO ABAJO DE IMAGEN CARTEL */
+    .container1st-container p {
+        font-size: 11px;
+    }
+    /* 2ND TEXTO */
+    .cont2ndTxt p {
+        font-size: 11px;
+    }
+    /* 3RD TEXTO BAJO IMAGEN */
+    .cont3rdImgTxt p {
+        font-size: 11px;
+    }
+    /* BOTTOM SECTION */
+    /* GRILLA DE GRID */
+    .bottomGridContainer-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    /* LIGHTBOX IMG */
+    .lightbox img{
+        margin-top: 20%;
+    }
+    /* LINKS FOOTER CONTAINER */
+    .linqsContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content:stretch;
+        font-size: 15px;
+    }
+    /* LINKS DIV */
+    .links {
+        padding-bottom: 3px;
+        font-size: 13px;
+    }
+    /* TEXTO DE FOOTER GAME */
+    .presentation p{
+        font-size: 12px;
+    }
+    /* DEVELOPERS FONTSIZE */
+    .devs{
+        font-size: 8px;
+    }
+    /* CHECKBOX IDIOMA CHECK::AFTER */
+    .check::after {
+        width: 17px;
+        margin-top: 2px;
+        height: 12px;
+    }
+    /* TEXTO INPUT CHECK IDIOMA */
+    .lang span {
+        font-size: 12px;
+    }
+}
+
+
+
+@media screen and (max-width: 1024px) {
+
+
+    .menu-container {
+        position: absolute;
+        display: flex; /* Ajusta el diseño para dispositivos móviles */
+        justify-content: space-between; /* Distribuye los elementos horizontalmente */
+        align-items: center; /* Centra los elementos verticalmente */
+        padding: 10px; /* Ajusta el espacio alrededor del menú */
+    }
+    
+    .menu-container::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(9, 9, 9, 0.215); /* Fondo semitransparente */
+        backdrop-filter: blur(5px); /* Aplica un filtro de desenfoque */
+        z-index: -1; /* Coloca el fondo borroso detrás del menú */
+        pointer-events: none; /* Permite que los eventos pasen a través del pseudo-elemento */
+        opacity: 0; /* Inicialmente oculta el fondo borroso */
+        transition: opacity 0.3s ease; /* Agrega una transición suave para la opacidad */
+    }
+    
+    .menu-container.active::before {
+        opacity: 1; /* Muestra el fondo borroso cuando el menú está activo */
+    }
+
+    /* Agregar estilo para deshabilitar el scroll cuando el menú está activado */
+    body.menu-open {
+        overflow: hidden;
+    }
+
+
+    /* Overlay para el área del menú */
+    .menu-toggle {
+        display: inline-block;
+        scale: 250%;
+        position: absolute;
+        cursor: pointer; /* Cambia el cursor a un puntero al pasar el ratón por encima */
+        text-decoration: none;
+        margin: 10vh 0 0 0;
+        padding: 20% 100%;
+        color: #dfdede;
+        transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease; /* Agrega la propiedad box-shadow a la transición*/
+        z-index: 1000; /* Asegura que el icono del menú esté en una capa superior */
+    }
+
+    .menu-toggle:hover {
+        transform: scale(1.2); /* Aumenta el tamaño del ícono */
+        filter: brightness(3); /* Aumenta el brillo del ícono */
+        filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5)) brightness(120%); /* Aplica un filtro de sombra suave y un filtro de brillo al ícono */
+    }
+
+    #menu-icon{
+        display: inline-block;
+    }
+
+    .navbar-menu {
+        display: none; /* Por defecto, oculta el menú en dispositivos móviles */
+        position: fixed;
+        z-index: 1000; /* Asegura que el menú esté en una capa superior */
+        top: 12%;
+        left: 20px; /* Ajuste para que el menú esté pegado al borde izquierdo */
+        background: transparent; /* Cambia el color de fondo del menú desplegable a transparente */
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        transition: opacity 0.3s ease; /* Agrega una transición de opacidad */
+        opacity: 0; /* Inicialmente establece la opacidad en 0 para ocultar el menú */
+    }
+    
+    .navbar-menu.active {
+        display: flex; /* Muestra el menú cuando la clase 'active' está presente */
+        flex-direction: column;
+        align-items: flex-start; /* Alinea los elementos del menú a la izquierda */
+        opacity: 1; /* Hace que el menú sea visible al activar la clase 'active' */
+        padding: 0;
+        margin: 0;
+    }
+    
+    
+    /* Estilos para los ítems del menú */
+    #nav-links {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+        margin: 0; /* Restablece cualquier margen previo */
+    }
+    
+    #nav-links li {
+        border-image: linear-gradient(to right, rgba(255, 255, 255, 0), #dfdede, rgba(255, 255, 255, 0)) 2 stretch;
+        text-align: justify;
+        border-bottom: 1px solid #dfdede; /* Línea divisoria entre elementos li */
+        outline: 1px solid transparent; /* Agrega un contorno adicional */
+        filter: brightness(1.5); /* Ajusta el brillo según sea necesario */
+        margin: -10px 0; /* Establece un margen vertical negativo */
+        padding: 0 0 10px 0; /* Ajusta el padding */
+        text-align: start;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+   
+
+    #nav-links li:last-child {
+        margin-bottom: -1px; /* Márgenes negativos para superponer la línea divisoria */
+
+    }
+    
+    
+    .navbar-menu.active #nav-links li {
+        opacity: 1; /* Hace que los ítems sean visibles al activar la clase 'active' en el menú */
+        transform: translateX(20px); /* Restaura la posición original de los ítems */
+    }
+    
+    /* Animación de aparición de los ítems del menú */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    #nav-links li a{
+        font-size: 200%;
+    }
+}
