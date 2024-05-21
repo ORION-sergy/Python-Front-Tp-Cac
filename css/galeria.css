@@ -691,7 +691,7 @@ nav{
 }
 
 .menu-container.active::before {
-    opacity: 2; /* Muestra el fondo borroso cuando el menú está activo */
+    opacity: 2; /* Muestra el fondo borroso cuando el menú está activo*/
 }
 
 /* Agregar estilo para deshabilitar el scroll cuando el menú está activado */
