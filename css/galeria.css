@@ -12,10 +12,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* CONTROLA ELEMENTOS PARA QUE NO SE SALGAN DE LA ESTRUCTURA */
 html, body {
     max-width: 100% !important;
     overflow-x: hidden !important;
 }
+/* QUITA BARRA DE DESPLAZAMIENTO EN PANTALLA */
 ::-webkit-scrollbar {
     display: none; 
 }
@@ -76,7 +78,7 @@ html, body {
             border-bottom-left-radius: 8px; 
             border-bottom-right-radius: 8px;
         }
-    /* LINKS LATERALES */
+    /* LINKS SOCIAL MEDIA */
         .linksLatG{
             display: flex;
             top: 0%;
@@ -129,6 +131,7 @@ html, body {
             text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
             animation: Down 2.2s infinite;
         }
+        /* EFECTOS ARROW DOWN */
         @keyframes Down {
             0%{
                 transform: translateY(210%);
@@ -192,11 +195,6 @@ html, body {
         .imgContainer1st img{
             border-radius: 6px;
             width: 100%;
-        }
-    /* SEPARADOR */
-        .sep{
-            display: none;
-            margin-top: 20px;
         }
     /* 2nd */
         .container2nd{
@@ -513,11 +511,6 @@ html, body {
             flex-direction: column;
         }
     }
-
-
-
-
-    
 /* SMALL max-width: 640px */
     @media (max-width: 640px) {
         /* NAV ICON */
@@ -612,7 +605,7 @@ html, body {
             font-size: 12px;
         }
     }
-/*  */
+/* --- */
 
 /*Menú por defecto*/
 nav{
@@ -666,7 +659,7 @@ nav{
 }
 
 /* MAX WIDT 1024 */
-@media screen and (max-width: 1900px) {
+@media screen and (max-width: 768px) {
 .menu-container {
     position: absolute;
     display: flex; /* Ajusta el diseño para dispositivos móviles */
